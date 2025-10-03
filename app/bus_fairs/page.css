@@ -1,0 +1,47 @@
+.busDetails {
+  height: max-content;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: minmax(200px, 600px);
+  padding: 5px 0px 5px 5px;
+  color: rgb(0, 0, 0);
+  box-shadow: 1px 1px 10px black;
+  border-radius: 15px;
+  gap: 5px;
+}
+
+.busDetails > span {
+  text-align: center;
+}
+
+.busTitle {
+  padding: 0px 5px 2px 1px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: minmax(50px, 250px);
+}
+
+.busTitle > label {
+  border: 2px solid rgb(0, 0, 0);
+  height: 50px;
+  display: grid;
+  text-align: center;
+  align-items: center;
+  grid-template-columns: minmax(50px, 250px);
+}
+
+.busData {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: minmax(50px, 250px);
+  padding: 0px 5px 2px 1px;
+}
+.busData > span {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: minmax(50px, 250px);
+  height: 60px;
+  text-align: center;
+  align-items: center;
+  border: 2px solid rgb(0, 0, 0);
+}

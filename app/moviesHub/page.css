@@ -1,0 +1,39 @@
+.hubContainer {
+  height: max-content;
+  display: grid;
+  grid-template-columns: minmax(200px, 300px);
+  text-align: center;
+  gap: 25px;
+  padding: 25px;
+  box-shadow: 1px 1px 10px black;
+  border-radius: 15px;
+}
+
+span {
+  font-size: 20px;
+}
+
+form {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 10px;
+  grid-template-columns: minmax(200px, 300px);
+}
+
+form > label {
+  text-align: left;
+}
+
+form > input {
+  height: 40px;
+  display: grid;
+  grid-template-columns: minmax(200px, 300px);
+  font-size: 18px;
+  padding: 0px 10px 0px 10px;
+  letter-spacing: 2px;
+}
+
+form > button {
+  height: 45px;
+  width: 100%;
+}
