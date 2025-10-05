@@ -27,10 +27,13 @@ export default function RootLayout({ children }) {
     let ls = JSON.parse(localStorage.getItem("LoginID"));
     const compareUsername = await bcrypt.compare(username, ls.Username);
     const comparePassword = await bcrypt.compare(password, ls.Password);
-    if (compareUsername && comparePassword) {
-      alert("Account Is Already Exists");
-    }
-    if (!username == "" && !password == "") {
+
+    if (
+      !username == "" &&
+      !password == "" &&
+      !compareUsername &&
+      !comparePassword
+    ) {
       const salt = 10;
       const hassUsername = await bcrypt.hash(username, salt);
       const hassPassword = await bcrypt.hash(password, salt);
@@ -41,7 +44,7 @@ export default function RootLayout({ children }) {
       setUsername("");
       setPassword("");
       setPageToggle("HomePage");
-    } else if (compareUsername && com) {
+    } else if (compareUsername && comparePassword) {
       alert("Account Is Already Exists");
     } else {
       alert("Fields Are Empty");

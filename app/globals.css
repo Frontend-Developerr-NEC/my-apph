@@ -154,7 +154,8 @@ main {
   align-items: center;
   justify-content: center;
   gap: 5px;
-
+border: 1px ridge whitesmoke;
+cursor: pointer;
   height: 50px;
   width: 250px;
   border-radius: 10px;
