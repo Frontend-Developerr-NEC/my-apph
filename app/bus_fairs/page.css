@@ -2,16 +2,19 @@
   height: max-content;
   display: grid;
   grid-auto-flow: row;
-  grid-template-columns: minmax(200px, 600px);
-  padding: 5px 0px 5px 5px;
-  color: rgb(0, 0, 0);
-  box-shadow: 1px 1px 10px black;
+  grid-template-columns: minmax(250px, 450px);
+  padding: 10px 6px 10px 10px;
+  color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 10px rgb(255, 255, 255);
   border-radius: 15px;
-  gap: 5px;
+  gap: 10px;
+ margin: 15px 10px 0px 10px;
+ border: 1px ridge blue ;
 }
 
 .busDetails > span {
   text-align: center;
+  color: rgb(0, 255, 4);
 }
 
 .busTitle {
@@ -22,7 +25,7 @@
 }
 
 .busTitle > label {
-  border: 2px solid rgb(0, 0, 0);
+  border: 2px solid rgb(5, 100, 195);
   height: 50px;
   display: grid;
   text-align: center;
@@ -43,5 +46,5 @@
   height: 60px;
   text-align: center;
   align-items: center;
-  border: 2px solid rgb(0, 0, 0);
+  border: 2px solid rgb(26, 90, 201);
 }

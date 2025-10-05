@@ -5,6 +5,11 @@ import Header from "./Components/Header/header";
 import bcrypt from "bcryptjs";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+
+import register from "../public/add-user.png";
+import login from "../public/login-.png";
+
 export default function RootLayout({ children }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -19,7 +24,12 @@ export default function RootLayout({ children }) {
 
   async function submitHandler(e) {
     e.preventDefault();
-    localStorage.getItem("User") || [];
+    let ls = JSON.parse(localStorage.getItem("LoginID"));
+    const compareUsername = await bcrypt.compare(username, ls.Username);
+    const comparePassword = await bcrypt.compare(password, ls.Password);
+    if (compareUsername && comparePassword) {
+      alert("Account Is Already Exists");
+    }
     if (!username == "" && !password == "") {
       const salt = 10;
       const hassUsername = await bcrypt.hash(username, salt);
@@ -27,9 +37,12 @@ export default function RootLayout({ children }) {
 
       const userData = { Username: hassUsername, Password: hassPassword };
       localStorage.setItem("User", JSON.stringify(userData));
+      localStorage.setItem("LoginID", JSON.stringify(userData));
       setUsername("");
       setPassword("");
       setPageToggle("HomePage");
+    } else if (compareUsername && com) {
+      alert("Account Is Already Exists");
     } else {
       alert("Fields Are Empty");
     }
@@ -38,7 +51,7 @@ export default function RootLayout({ children }) {
   async function loginHandler(e) {
     e.preventDefault();
     try {
-      let ls = JSON.parse(localStorage.getItem("User"));
+      let ls = JSON.parse(localStorage.getItem("LoginID"));
       const compareUsername = await bcrypt.compare(username, ls.Username);
       const comparePassword = await bcrypt.compare(password, ls.Password);
       if (compareUsername && comparePassword) {
@@ -52,6 +65,8 @@ export default function RootLayout({ children }) {
   }
   return (
     <html lang="en">
+      <title>Freelancer</title>
+      {/* <link rel="shortcut icon" href={freelancer} type="image/x-icon" /> */}
       <body>
         {pageToggle == "Register" && (
           <form className="formRegister">
@@ -74,7 +89,12 @@ export default function RootLayout({ children }) {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </label>
-            <button type="click" onClick={submitHandler}>
+            <button
+              type="click"
+              className="RegisterLink"
+              onClick={submitHandler}
+            >
+              <Image src={register} alt="=" className="register" />
               Register
             </button>
             <button
@@ -110,7 +130,8 @@ export default function RootLayout({ children }) {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </label>
-            <button type="click" onClick={loginHandler}>
+            <button type="click" className="LoginLink" onClick={loginHandler}>
+              <Image src={login} alt="=" className="login" />
               Login
             </button>
             <button

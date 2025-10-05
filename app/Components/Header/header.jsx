@@ -3,21 +3,23 @@ import "./header.css";
 import Link from "next/link";
 import Image from "next/image";
 import menu from "../../../public/menu.png";
-import cross from "../../../public/cross.png";
+
+import home from "../../../public/home.png";
+import bus from "../../../public/shuttle-bus.png";
+import movies from "../../../public/clapperboard.png";
+import programmer from "../../../public/programmer.png";
+import logout from "../../../public/logout.png";
+import x from "../../../public/x.png";
+
 export default function Header() {
   const [sidebar, setSidebar] = useState("close");
-function themeToggler(e) {
-  e.preventDefault();
-document.getElementById("ThemeToggler").style.position="absolute"
-document.getElementById("ThemeToggler").style.right="0%"
-console.log("Clicked");
 
-}
   return (
     <>
       <header>
         <Link className="logo" href="/">
-          Fleverr.<span>co</span>
+          Freelancer
+                    {/* <Image src={} alt="=" className="" /> */}
         </Link>
 
         <button
@@ -38,23 +40,41 @@ console.log("Clicked");
                 setSidebar("close");
               }}
             >
-              <Image src={cross} alt="X" className="cross" />
+              <Image src={x} alt="X" className="cross" />
             </button>
-            <Link href="/" className="Links" onClick={() => setSidebar("close")}>
+            <Link
+              href="/"
+              className="Links"
+              onClick={() => setSidebar("close")}
+            >
+              <Image src={home} alt="=" className="home" />
               Home
             </Link>
-            <Link href="/bus_fairs/" className="Links" onClick={() => setSidebar("close")}>
+            <Link
+              href="/bus_fairs/"
+              className="Links"
+              onClick={() => setSidebar("close")}
+            >
+              <Image src={bus} alt="=" className="bus" />
               Bus Fair
             </Link>
-            <Link href="/moviesHub/" className="Links" onClick={() => setSidebar("close")}>
+            <Link
+              href="/moviesHub/"
+              className="Links"
+              onClick={() => setSidebar("close")}
+            >
+              <Image src={movies} alt="=" className="movies" />
               Movies Hub
             </Link>
-            <Link href="/programerHub/" className="Links" onClick={() => setSidebar("close")}>
+            <Link
+              href="/programerHub/"
+              className="Links"
+              onClick={() => setSidebar("close")}
+            >
+              <Image src={programmer} alt="=" className="programmer" />
               Programer Hub
             </Link>
-            <div className="themeContainer">
-              <button type="button" className="themeToggler" id="ThemeToggler" onClick={themeToggler}>@</button>
-            </div>
+
             <button
               className="logout"
               onClick={() => {
@@ -62,6 +82,7 @@ console.log("Clicked");
                 window.location.reload();
               }}
             >
+              <Image src={logout} alt="=" className="Logout" />
               Logout
             </button>
           </aside>
