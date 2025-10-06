@@ -25,36 +25,33 @@ export default function RootLayout({ children }) {
   async function submitHandler(e) {
     e.preventDefault();
 
-    let ls = JSON.parse(localStorage.getItem("LoginID"));
-    if (ls) {
-      var compareUsername = await bcrypt.compare(username, ls.Username);
-      var comparePassword = await bcrypt.compare(password, ls.Password);
+    const UserData = { Username: username, Password: password };
+    localStorage.setItem("LoginID", JSON.stringify(UserData));
 
+    let ls = JSON.parse(localStorage.getItem("LoginID"));
+    var compareUsername = await bcrypt.compare(username, ls.Username);
+    var comparePassword = await bcrypt.compare(password, ls.Password);
+
+    if (!username == "" && !password == "") {
       if (compareUsername && comparePassword) {
-        alert("Account Is Already Exists");
-      }
-    } else {
-      if (
-        !username == "" &&
-        !password == "" &&
-        !compareUsername &&
-        !comparePassword
-      ) {
+        alert("Account Already Exists!");
+      } else {
         const salt = 10;
         const hassUsername = await bcrypt.hash(username, salt);
         const hassPassword = await bcrypt.hash(password, salt);
 
         const userData = { Username: hassUsername, Password: hassPassword };
-        localStorage.setItem("User", JSON.stringify(userData));
+        const UserData = { Username: username, Password: password };
+        localStorage.setItem("User", JSON.stringify(UserData));
         localStorage.setItem("LoginID", JSON.stringify(userData));
         setUsername("");
         setPassword("");
         setPageToggle("HomePage");
-      } else if (username == "Admin@" && password == "12345") {
-        setPageToggle("HomePage");
-      } else {
-        alert("Fields Are Empty");
       }
+    } else if (username == "Admin@" && password == "12345") {
+      setPageToggle("HomePage");
+    } else {
+      alert("Fields Are Empty");
     }
   }
 
@@ -65,6 +62,11 @@ export default function RootLayout({ children }) {
       const compareUsername = await bcrypt.compare(username, ls.Username);
       const comparePassword = await bcrypt.compare(password, ls.Password);
       if (compareUsername && comparePassword) {
+        const salt = 10;
+        const hassUsername = await bcrypt.hash(username, salt);
+        const hassPassword = await bcrypt.hash(password, salt);
+        const userData = { Username: hassUsername, Password: hassPassword };
+        localStorage.setItem("User", JSON.stringify(userData));
         setPageToggle("HomePage");
       } else if (username == "Admin@" && password == "123") {
         setPageToggle("HomePage");
@@ -87,6 +89,7 @@ export default function RootLayout({ children }) {
               Username
               <input
                 type="text"
+                required
                 name="username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
@@ -96,6 +99,7 @@ export default function RootLayout({ children }) {
               Password
               <input
                 type="text"
+                required
                 name="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -128,6 +132,7 @@ export default function RootLayout({ children }) {
               Username
               <input
                 type="text"
+                required
                 name="username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
@@ -137,6 +142,7 @@ export default function RootLayout({ children }) {
               Password
               <input
                 type="text"
+                required
                 name="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}

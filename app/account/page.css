@@ -1,0 +1,56 @@
+.accountContainer{
+     margin: 15px 10px 0px 10px;
+}
+
+.accountInfo{
+    padding: 15px;
+    /* border: 2px solid salmon; */
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 2px salmon;
+    gap: 15px;
+}
+
+.accountInfo > .accDetails{
+    text-align: center;
+}
+
+.accountInfo > .showAccount{
+    height: 40px;
+    width: 150px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid whitesmoke;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.accountInfo > span{
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: minmax(100px,300px);
+}
+
+.accountDatas {
+    display: flex;
+    flex-direction: column;
+}
+
+.accountDatas >span{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.accountDatas > span > #usernameShow,#passwordShow{
+    height: 40px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    color: whitesmoke;
+}

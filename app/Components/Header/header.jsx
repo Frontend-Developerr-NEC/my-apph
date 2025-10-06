@@ -8,6 +8,7 @@ import home from "../../../public/home.png";
 import bus from "../../../public/shuttle-bus.png";
 import movies from "../../../public/clapperboard.png";
 import programmer from "../../../public/programmer.png";
+import account from "../../../public/account.png";
 import logout from "../../../public/logout.png";
 import x from "../../../public/x.png";
 
@@ -19,7 +20,7 @@ export default function Header() {
       <header>
         <Link className="logo" href="/">
           Freelancer
-                    {/* <Image src={} alt="=" className="" /> */}
+                    
         </Link>
 
         <button
@@ -73,6 +74,14 @@ export default function Header() {
             >
               <Image src={programmer} alt="=" className="programmer" />
               Programer Hub
+            </Link>
+            <Link
+              href="/account/"
+              className="Links"
+              onClick={() => setSidebar("close")}
+            >
+              <Image src={account} alt="=" className="account" />
+              Account
             </Link>
 
             <button
