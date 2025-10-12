@@ -14,13 +14,32 @@
   padding: 15px;
   gap: 15px;
   border-radius: 15px;
-  box-shadow: 5px 0px 10px rgb(62, 36, 255), -5px 0px 10px rgb(255, 34, 148),
-    0px 5px 10px rgb(255, 34, 148), 0px -5px 10px rgb(29, 97, 255);
+  box-shadow: 5px 5px 10px rgb(62, 36, 255), -5px -5px 10px rgb(255, 34, 148);
   display: grid;
   grid-auto-flow: row;
   text-align: center;
   grid-template-columns: minmax(200px, 350px);
+  animation: glowing 10s linear infinite;
 }
+
+@keyframes glowing {
+  0% {
+    box-shadow: 5px 5px 10px rgb(62, 36, 255), -5px -5px 10px rgb(255, 34, 148);
+  }
+  25% {
+    box-shadow: 4px 4px 10px rgb(255, 34, 148), -5px -5px 10px rgb(62, 36, 255);
+  }
+  50% {
+    box-shadow: 4px 4px 10px rgb(62, 36, 255), -5px -5px 10px rgb(255, 34, 148);
+  }
+  75% {
+    box-shadow: 4px 4px 10px rgb(255, 34, 148), -5px -5px 10px rgb(62, 36, 255);
+  }
+  100% {
+    box-shadow: 4px 4px 10px rgb(62, 36, 255), -5px -5px 10px rgb(255, 34, 148);
+  }
+}
+
 h4 {
   letter-spacing: 1px;
 }

@@ -6,7 +6,9 @@ import bcrypt from "bcryptjs";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-
+// const meta = {
+//   title:"Freelancer"
+// }
 import register from "../public/add-user.png";
 import login from "../public/login-.png";
 
@@ -37,7 +39,6 @@ export default function RootLayout({ children }) {
     const compareUsername = await bcrypt.compare(username, ls.Username);
     const compareEmail = await bcrypt.compare(email, ls.Email);
     const comparePassword = await bcrypt.compare(password, ls.Password);
-   
 
     if (!username == "" && !email == "" && !password == "") {
       if (
@@ -85,7 +86,7 @@ export default function RootLayout({ children }) {
         const hassUsername = await bcrypt.hash(username, salt);
         const hassEmail = await bcrypt.hash(email, salt);
         const hassPassword = await bcrypt.hash(password, salt);
-           
+
         const hassData = {
           Username: hassUsername,
           Email: hassEmail,
@@ -112,6 +113,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <title>Freelancer</title>
+
       {/* <link rel="shortcut icon" href={freelancer} type="image/x-icon" /> */}
       <body>
         {pageToggle == "Register" && (

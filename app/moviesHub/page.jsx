@@ -35,22 +35,28 @@ export default function Movieshub() {
   }
 
   function webseriesHandler(e) {
-     e.preventDefault();
+    e.preventDefault();
 
-    let webseries = e.target.webseries.value.trim().toLowerCase().split(" ").join("-");
+    let webseries = e.target.webseries.value
+      .trim()
+      .toLowerCase()
+      .split(" ")
+      .join("-");
 
     let season = e.target.season.value.trim();
+    let s = false;
+    if (0 > season && season < 10) {
+      s = true;
+    }
+    let valid = s == true ? `${season}` : season > 9 ? season : "0" + season;
 
+    const api2 = `https://isaidub.free/movie/${webseries}-season-${valid}-tamil-dubbed-movie/`;
 
-        const api2 = `https://isaidub.free/movie/${webseries}-season-${season}-tamil-dubbed-movie/`;
+    window.location.href = api2;
+    webseries = "";
+    season = "";
+  }
 
-        window.location.href = api2;
-        webseries = "";
-        season = "";
-
-      }
-    
-  
   return (
     <>
       <div className="hubContainer">
@@ -74,7 +80,6 @@ export default function Movieshub() {
             <button type="submit">Search</button>
           </form>
         </div>
-
       </div>
     </>
   );

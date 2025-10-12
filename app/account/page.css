@@ -9,6 +9,25 @@
   box-shadow: 4px 4px 10px rgb(210, 20, 20), -3px -3px 10px rgb(33, 166, 232);
   gap: 15px;
   grid-template-columns: minmax(200px, 300px);
+  animation: glowing 10s linear infinite;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 4px 4px 10px rgb(210, 20, 20), -3px -3px 10px rgb(33, 166, 232);
+  }
+  25% {
+    box-shadow: 4px 4px 10px rgb(33, 166, 232), -3px -3px 10px rgb(210, 20, 20);
+  }
+  50% {
+    box-shadow: 4px 4px 10px rgb(210, 20, 20), -3px -3px 10px rgb(33, 166, 232);
+  }
+  75% {
+    box-shadow: 4px 4px 10px rgb(33, 166, 232), -3px -3px 10px rgb(210, 20, 20);
+  }
+  100% {
+    box-shadow: 4px 4px 10px rgb(210, 20, 20), -3px -3px 10px rgb(33, 166, 232);
+  }
 }
 
 .AccountLogo {
