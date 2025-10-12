@@ -13,7 +13,7 @@ export default function BusFairs() {
          <div className='busData'>
             <span>Gobi</span>
             <span>Sathy</span>
-            <span>$26</span>
+            <span>$16</span>
          </div>
          <div className='busData'>
             <span>Gobi</span>
