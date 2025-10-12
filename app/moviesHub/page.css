@@ -4,7 +4,7 @@
   grid-template-columns: minmax(200px, 300px);
   text-align: center;
   gap: 25px;
-  margin: 20px 10px 20px 10px;
+  margin: 10px 10px 20px 10px;
   background-color: black;
 }
 
@@ -121,4 +121,16 @@ span {
   border-radius: 10px;
   border: none;
   box-shadow: 1px 1px 5px rgb(255, 255, 255);
+}
+
+@media screen and (min-width:768px) {
+  .hubContainer {
+  height: max-content;
+  display: grid;
+  grid-auto-flow: column;
+  text-align: center;
+  gap: 50px;
+  margin: 15px 10px 20px 10px;
+  background-color: black;
+}
 }

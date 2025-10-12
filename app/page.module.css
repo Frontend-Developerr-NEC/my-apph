@@ -6,7 +6,7 @@
   gap: 35px;
   grid-template-columns: minmax(200px, 300px);
   padding: 15px;
-  margin: 15px 10px 0px 10px;
+  margin: 5px 10px 10px 10px;
 }
 
 .Linkedin {
@@ -70,4 +70,49 @@
 
 .github > span {
   color: rgb(255, 255, 255);
+}
+
+@media screen and (min-width:768px) {
+  .profiles {
+  /* border: 2px solid gainsboro; */
+  height: max-content;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 35px;
+  grid-template-columns: minmax(200px, 300px);
+  padding: 15px;
+  margin: 5px 10px 10px 10px;
+}
+
+.Linkedin {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 15px;
+  /* border: 2px ridge rgb(255, 255, 255); */
+  border-radius: 20px;
+  box-shadow: 4px 4px 10px rgb(210, 20, 20), -3px -3px 10px rgb(33, 166, 232);
+  padding: 20px;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  /* position: relative; */
+}
+
+.github {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 15px;
+  /* border: 2px ridge salmon; */
+  border-radius: 20px;
+  box-shadow: 4px 4px 10px rgb(210, 20, 20), -3px -3px 10px rgb(33, 166, 232);
+  padding: 20px;
+    width: 300px;
+  height: 200px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  /* position: relative; */
+}
 }

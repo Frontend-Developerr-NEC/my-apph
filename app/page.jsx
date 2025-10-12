@@ -16,7 +16,7 @@ export default function Home() {
             className={s.linkedin}
             />
             <span>LinkedIn</span>
-          <a href="http://">Check Now</a>
+          <a href="https://www.linkedin.com/in/jaan-brigith-0454a6344">Check Now</a>
         </div>
 
         <div className={s.github} >
@@ -28,7 +28,7 @@ export default function Home() {
               />
           </div>
               <span>Github</span>
-          <a href="http://">Check Now</a>
+          <a href="https://github.com/Frontend-Developerr-NEC">Check Now</a>
         </div>
       </section>
     </>
