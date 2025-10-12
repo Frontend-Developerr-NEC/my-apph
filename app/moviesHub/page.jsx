@@ -42,8 +42,9 @@ export default function Movieshub() {
     let season = e.target.season.value.trim();
 
 
-        const api2 = `https://isaidub.free/movie/${webseries}-season-${season}-tamil-dubbed-movie/`;
+       // const api2 = `https://isaidub.free/movie/${webseries}-season-${season}-tamil-dubbed-movie/`;
 
+  const api2 = `https://isaidub.free/movie/${webseries}-season-02-tamil-dubbed-movie/`
         window.location.href = api2;
         webseries = "";
         season = "";
