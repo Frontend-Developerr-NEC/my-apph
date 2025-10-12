@@ -4,8 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import menu from "../../../public/menu.png";
 
-import home from "../../../public/home.png";
-import bus from "../../../public/shuttle-bus.png";
+import home from "../../../public/home1.png";
+import bus from "../../../public/bus.png";
 import movies from "../../../public/clapperboard.png";
 import programmer from "../../../public/programmer.png";
 import account from "../../../public/account.png";
@@ -14,13 +14,11 @@ import x from "../../../public/x.png";
 
 export default function Header() {
   const [sidebar, setSidebar] = useState("close");
-
   return (
     <>
       <header>
         <Link className="logo" href="/">
           Freelancer
-                    
         </Link>
 
         <button
@@ -45,7 +43,7 @@ export default function Header() {
             </button>
             <Link
               href="/"
-              className="Links"
+              className="Links homeLink"
               onClick={() => setSidebar("close")}
             >
               <Image src={home} alt="=" className="home" />

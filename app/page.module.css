@@ -1,9 +1,73 @@
-.div{
-    border: 2px solid black;
-    height: 150px;
-    width: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.profiles {
+  /* border: 2px solid gainsboro; */
+  height: max-content;
+  display: grid;
+  grid-auto-flow: row;
+  gap: 35px;
+  grid-template-columns: minmax(200px, 300px);
+  padding: 15px;
+  margin: 15px 10px 0px 10px;
+}
+
+.Linkedin {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 15px;
+  /* border: 2px ridge rgb(255, 255, 255); */
+  border-radius: 20px;
+  box-shadow: 4px 4px 10px rgb(210, 20, 20), -3px -3px 10px rgb(33, 166, 232);
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  /* position: relative; */
+}
+.linkedin {
+  height: 70px;
+  width: 70px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  /* border-radius: 50%; */
+}
+
+.Linkedin > span {
+  color: rgb(0, 170, 255);
+}
+
+.github {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 15px;
+  /* border: 2px ridge salmon; */
+  border-radius: 20px;
+  box-shadow: 4px 4px 10px rgb(210, 20, 20), -3px -3px 10px rgb(33, 166, 232);
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  /* position: relative; */
+}
+.githubimgWrapper {
+  height: max-content;
+  width: max-content;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+.Github {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.github > span {
+  color: rgb(255, 255, 255);
 }

@@ -14,6 +14,7 @@ header {
   background-color: rgb(0, 0, 0);
   position: fixed;
   top: 0px;
+  z-index: 9999999;
   border-bottom: 2px solid whitesmoke;
 }
 
@@ -98,6 +99,11 @@ aside {
   gap: 5px;
 }
 
+.homeLink{
+  font-size: 18px;
+
+}
+
 aside > .logout {
   width: max-content;
   padding: 10px;
@@ -166,14 +172,21 @@ aside > .logout {
  
 }
 
-.home,.bus,.movies,.programmer{
-  height: 27px;
-  width: 27px;
+.home,.bus,.movies{
+  height: 22px;
+  width: 22px;
+  margin: 0px 5px 0px 0px;
+}
+.programmer{
+  height: 25px;
+  width: 30px;
+  /* margin: 0px 5px 0px 0px; */
 }
 
 .account{
   height: 35px;
   width: 35px;
+    margin: 0px 2px 0px 0px;
 }
 
 

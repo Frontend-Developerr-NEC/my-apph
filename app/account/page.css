@@ -1,56 +1,49 @@
-.accountContainer{
-     margin: 15px 10px 0px 10px;
+.AccountContainer {
+  margin: 10px 10px 0px 10px;
+  padding: 25px;
+  display: grid;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  box-shadow: 5px 0px 10px rgb(204, 36, 255), -5px 0px 10px rgb(34, 255, 229),
+    0px 5px 10px rgb(214, 255, 34), 0px -5px 10px rgb(255, 29, 176);
+  gap: 15px;
+  grid-template-columns: minmax(200px, 300px);
 }
 
-.accountInfo{
-    padding: 15px;
-    /* border: 2px solid salmon; */
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px 2px salmon;
-    gap: 15px;
+.AccountLogo {
+  height: 120px;
+  width: 120px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  border: 10px solid rgb(255, 0, 0);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  font-size: 65px;
+  font-weight: 900;
+  color: rgb(255, 255, 255);
 }
 
-.accountInfo > .accDetails{
-    text-align: center;
+.AccountContainer > label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  color: rgb(255, 255, 255);
 }
+.AccountContainer > label > span {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  letter-spacing: 5px;
+  font-style: oblique;
 
-.accountInfo > .showAccount{
-    height: 40px;
-    width: 150px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 2px solid whitesmoke;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.accountInfo > span{
-    display: grid;
-    grid-auto-flow: row;
-    grid-template-columns: minmax(100px,300px);
-}
-
-.accountDatas {
-    display: flex;
-    flex-direction: column;
-}
-
-.accountDatas >span{
-    display: flex;
-    flex-direction: column;
-
-}
-
-.accountDatas > span > #usernameShow,#passwordShow{
-    height: 40px;
-    text-align: center;
-    background-color: transparent;
-    border: none;
-    color: whitesmoke;
 }
