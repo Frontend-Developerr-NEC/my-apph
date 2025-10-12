@@ -12,6 +12,7 @@ import login from "../public/login-.png";
 
 export default function RootLayout({ children }) {
   const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [pageToggle, setPageToggle] = useState("Register");
 
@@ -25,26 +26,40 @@ export default function RootLayout({ children }) {
   async function submitHandler(e) {
     e.preventDefault();
 
-    const UserData = { Username: username, Password: password };
+    const UserData = {
+      Username: username,
+      Email: email,
+      Password: password,
+    };
     localStorage.setItem("LoginID", JSON.stringify(UserData));
 
     let ls = JSON.parse(localStorage.getItem("LoginID"));
-    var compareUsername = await bcrypt.compare(username, ls.Username);
-    var comparePassword = await bcrypt.compare(password, ls.Password);
+    const compareUsername = await bcrypt.compare(username, ls.Username);
+    const compareEmail = await bcrypt.compare(email, ls.Email);
+    const comparePassword = await bcrypt.compare(password, ls.Password);
+   
 
-    if (!username == "" && !password == "") {
-      if (compareUsername && comparePassword) {
+    if (!username == "" && !email == "" && !password == "") {
+      if (
+        (compareUsername && comparePassword) ||
+        (compareEmail && comparePassword)
+      ) {
         alert("Account Already Exists!");
       } else {
         const salt = 10;
         const hassUsername = await bcrypt.hash(username, salt);
+        const hassEmail = await bcrypt.hash(email, salt);
         const hassPassword = await bcrypt.hash(password, salt);
 
-        const userData = { Username: hassUsername, Password: hassPassword };
-        const UserData = { Username: username, Password: password };
+        const userData = {
+          Username: hassUsername,
+          Email: hassEmail,
+          Password: hassPassword,
+        };
         localStorage.setItem("User", JSON.stringify(UserData));
         localStorage.setItem("LoginID", JSON.stringify(userData));
         setUsername("");
+        setEmail("");
         setPassword("");
         setPageToggle("HomePage");
       }
@@ -60,18 +75,35 @@ export default function RootLayout({ children }) {
     try {
       let ls = JSON.parse(localStorage.getItem("LoginID"));
       const compareUsername = await bcrypt.compare(username, ls.Username);
+      const compareEmail = await bcrypt.compare(password, ls.Email);
       const comparePassword = await bcrypt.compare(password, ls.Password);
-      if (compareUsername && comparePassword) {
+      if (
+        (compareUsername && comparePassword) ||
+        (compareEmail && comparePassword)
+      ) {
         const salt = 10;
         const hassUsername = await bcrypt.hash(username, salt);
+        const hassEmail = await bcrypt.hash(email, salt);
         const hassPassword = await bcrypt.hash(password, salt);
-        const userData = { Username: hassUsername, Password: hassPassword };
+           
+        const hassData = {
+          Username: hassUsername,
+          Email: hassEmail,
+          Password: hassPassword,
+        };
+        const userData = {
+          Username: username,
+          Email: email,
+          Password: password,
+        };
         localStorage.setItem("User", JSON.stringify(userData));
+        localStorage.setItem("LoginID", JSON.stringify(hassData));
         setPageToggle("HomePage");
       } else if (username == "Admin@" && password == "123") {
         setPageToggle("HomePage");
       }
       setUsername("");
+      setEmail("");
       setPassword("");
     } catch (error) {
       console.log(error.message);
@@ -93,6 +125,16 @@ export default function RootLayout({ children }) {
                 name="username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
+              />
+            </label>
+            <label>
+              Email
+              <input
+                type="text"
+                required
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </label>
             <label>
