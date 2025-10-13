@@ -45,7 +45,7 @@ export default function Movieshub() {
 
     let season = e.target.season.value.trim();
     let s = false;
-    if (season >= 0 && season < 10) {
+    if (season >= 1 && season =< 9) {
       s = true;
     }
     let valid = s == true ? "0"+season : season > 9 ? season : "0"+season;
