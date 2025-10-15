@@ -51,7 +51,7 @@ export default function Movieshub() {
     let valid = s == true ? `${season}` : season > 9 ? season : "0" + season;
 
 
-        const api2 = `https://isaidub.free/movie/${webseries}-season-${season}-tamil-dubbed-movie/`;
+        const api2 = `https://isaidub.free/movie/${webseries}-season-${valid}-tamil-dubbed-movie/`;
 
         window.location.href = api2;
         webseries = "";

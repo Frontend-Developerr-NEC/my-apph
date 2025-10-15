@@ -4,17 +4,16 @@
   grid-template-columns: minmax(200px, 300px);
   text-align: center;
   gap: 25px;
-  margin: 10px 10px 20px 10px;
   background-color: black;
 }
 
 .moviesWrapper,
 .webseriesWrapper {
   /* box-shadow: 4px 4px 10px rgb(210, 20, 77), -3px -3px 10px rgb(33, 83, 232); */
-    animation: glowing 10s linear infinite ;
+    animation: movies 10s linear infinite ;
 }
 
-@keyframes glowing{
+@keyframes movies{
   0%{
   box-shadow: 4px 4px 10px rgb(210, 20, 77), -3px -3px 10px rgb(33, 83, 232);
   }

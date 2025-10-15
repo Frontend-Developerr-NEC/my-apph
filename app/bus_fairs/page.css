@@ -9,12 +9,10 @@
     0px -4px 7px rgb(74, 210, 20);
   border-radius: 15px;
   gap: 10px;
-  margin: 15px 10px 0px 10px;
-  animation: glowing 2s linear infinite;
-  /* border: 1px ridge blue ; */
+  animation: bus 10s linear infinite;
 }
 
-@keyframes glowing {
+@keyframes bus {
   0% {
     box-shadow: 4px 4px 7px rgb(33, 113, 232), -4px 4px 7px rgb(33, 113, 232),
       0px -4px 7px rgb(74, 210, 20);
