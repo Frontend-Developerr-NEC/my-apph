@@ -17,6 +17,7 @@ export default function Home() {
             JavaScript. React is designed to let you seamlessly combine
             components written by independent people, teams, and organizations.
           </p>
+          <a href="https://react.dev/" target="_new">Check Now</a>
         </div>
 
         <div className={s.NextjstWrapper}>
@@ -28,6 +29,7 @@ export default function Home() {
             fetching, server actions, routing, and more. Learn Next.js features,
             deploy to Vercel, and explore templates and showcases.
           </p>
+          <a href="https://nextjs.org/" target="_new">Check Now</a>
         </div>
 
         <div className={s.GithubtWrapper}>
@@ -39,6 +41,7 @@ export default function Home() {
             used for open source software development and offers various tools
             for collaboration, project management, and security.
           </p>
+          <a href="https://github.com/" target="_new">Check Now</a>
         </div>
 
         <div className={s.VercelWrapper}>
@@ -50,6 +53,7 @@ export default function Home() {
             tools and templates to deploy from Git or CLI, integrate with
             various platforms, and optimize your rendering and observability.
           </p>
+          <a href="https://vercel.com/" target="_new">Check Now</a>
         </div>
       </section>
     </>
