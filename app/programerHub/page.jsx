@@ -48,6 +48,7 @@ export default function ProgramerHub() {
             <a
               className="a"
               href="https://www.linkedin.com/in/jaan-brigith-0454a6344"
+              target="_new"
             >
               Check Now
             </a>
@@ -58,7 +59,9 @@ export default function ProgramerHub() {
               <Image src={github} alt="github" className="Github" />
             </div>
             <span>Github</span>
-            <a className="a" href="https://github.com/Frontend-Developerr-NEC">
+            <a className="a" href="https://github.com/Frontend-Developerr-NEC"
+              target="_new"
+              >
               Check Now
             </a>
           </div>
