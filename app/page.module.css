@@ -20,6 +20,7 @@ justify-content: center;
   border-radius: 15px;
   box-shadow: 0px 0px 10px rgb(255, 255, 255);
 }
+<<<<<<< HEAD
 
 .linkA{
 height: max-content;
@@ -36,6 +37,20 @@ word-spacing: 2px;
 .reactLogo{
   height: 60px;
   width: 60px;
+=======
+.ReactWrapper,
+.NextjstWrapper,
+.GithubtWrapper,
+.VercelWrapper > a{
+letter-spacing: 2px;
+}
+.reactLogo,
+.nextjsLogo,
+.githubLogo,
+.vercelLogo {
+  height: 50px;
+  width: 50px;
+>>>>>>> 45c725682cf7cf92ac3ec3023f439070451fd6a2
   border-radius: 15px;
   border: 1px ridge rgb(255, 255, 255);
   padding: 10px;
@@ -63,7 +78,11 @@ word-spacing: 2px;
 
 .ReactWrapper > h4 {
   text-align: left;
+<<<<<<< HEAD
   font-size: 22px;
+=======
+  font-size: 20px;
+>>>>>>> 45c725682cf7cf92ac3ec3023f439070451fd6a2
   color: #ffffff;
   letter-spacing: 2px;
 }
