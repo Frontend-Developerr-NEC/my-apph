@@ -12,55 +12,113 @@
   display: grid;
   grid-auto-flow: row;
   gap: 15px;
-  /* border: 2px solid rgb(0, 0, 0); */
   height: max-content;
   padding: 20px;
   text-align: justify;
+justify-content: center;
   grid-template-columns: minmax(200px, 400px);
   border-radius: 15px;
-  box-shadow: 0px 0px 10px whitesmoke;
+  box-shadow: 0px 0px 10px rgb(255, 255, 255);
 }
 
-.reactLogo,
-.nextjsLogo,
-.githubLogo,
-.vercelLogo {
-  height: 50px;
-  width: 50px;
+.linkA{
+height: max-content;
+width: max-content;
+color: rgb(0, 0, 0);
+text-decoration: none;
+background-color: rgb(40, 40, 202);
+padding: 15px;
+border-radius: 10px;
+letter-spacing: 2px;
+word-spacing: 2px;
+}
+
+.reactLogo{
+  height: 60px;
+  width: 60px;
   border-radius: 15px;
-  border: 2px solid whitesmoke;
+  border: 1px ridge rgb(255, 255, 255);
+  padding: 10px;
+}
+
+.nextjsLogo {
+  height: 60px;
+  width: 60px;
+  border-radius: 15px;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.githubLogo {
+  height: 60px;
+  width: 60px;
+  border-radius: 10px;
+}
+
+.vercelLogo {
+  height: 60px;
+  width: 60px;
+  border-radius: 15px;
+  border: 2px solid rgb(255, 255, 255);
 }
 
 .ReactWrapper > h4 {
   text-align: left;
-  font-size: 20px;
-  color: #88dbcc;
+  font-size: 22px;
+  color: #ffffff;
   letter-spacing: 2px;
 }
 
 .NextjstWrapper > h4 {
   text-align: left;
-  font-size: 17px;
+  font-size: 20px;
   color: #ffffff;
   letter-spacing: 4px;
 }
 
 .GithubtWrapper > h4 {
   text-align: left;
-  font-size: 17px;
+  font-size: 20px;
   color: #ffffff;
   letter-spacing: 3px;
 }
 
 .VercelWrapper > h4 {
   text-align: left;
-  font-size: 17px;
+  font-size: 20px;
   color: #ffffff;
   letter-spacing: 3px;
 }
 
 .ReactWrapper,
-.NextjstWrapper > p {
+.NextjstWrapper,.GithubtWrapper,.VercelWrapper > p {
   color: rgb(235 236 240);
-  /* margin: 0% 0% 10px 0%; */
+  font-size: 19px;
+  letter-spacing: 2px;
+  /* word-spacing: 2px; */
+}
+
+@media screen and (min-width:769px) {
+  .programmingLanguage{
+    display: grid;
+    grid-auto-flow: column;
+grid-template-areas: 
+"react nextjs github"
+"vercel";
+
+  }
+  .ReactWrapper{
+grid-template: "react";
+}
+.NextjstWrapper{
+  
+  grid-template: "nextjs";
+}
+.GithubtWrapper{
+  grid-template: "github";
+  
+}
+.VercelWrapper{
+  grid-template: "vercel";
+
+}
 }

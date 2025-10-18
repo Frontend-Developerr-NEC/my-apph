@@ -15,19 +15,9 @@ export default function ProgramerHub() {
     dh.textContent = `${window.innerHeight.toFixed(0)}`;
     dw.textContent = `${window.innerWidth.toFixed(0)}`;
 
-    // dataFetch();
   }, []);
 
-  async function dataFetch() {
-    const api = "http://localhost:8000/api";
-    try {
-      const dataApi = await fetch(api);
-      const data = dataApi.json();
-      console.log(data);
-    } catch (error) {
-      console.log(error.message);
-    }
-  }
+
   return (
     <>
       <section className="ProgrammerHubConatiner">

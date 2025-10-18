@@ -1,0 +1,61 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+.scrolltopContainer {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  overflow: hidden;
+  padding: 3px;
+  background-color: whitesmoke;
+  border-radius: 50px;
+  height: max-content;
+  width: max-content;
+}
+.Link1,.Link2,.Link3{
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  border: 2px solid whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrollLinks{
+  font-size: 18px;
+  text-decoration: none;
+  color: rgb(0, 149, 255);
+}
+
+.Link1 {
+  position: fixed;
+  bottom: 15px;
+  right: 95px;
+}
+.Link2 {
+  position: fixed;
+  bottom: 78px;
+  right: 78px;
+}
+.Link3 {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+}
+
+.scrolltopWrapper {
+  height: 50px;
+  width: 50px;
+  background-color: black;
+  border: 2px solid whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}

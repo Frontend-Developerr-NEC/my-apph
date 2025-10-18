@@ -2,6 +2,7 @@
 
 import "./globals.css";
 import Header from "./Components/Header/header";
+import ScrollTop from "./Components/scrolltop/scrolltop"
 import bcrypt from "bcryptjs";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -111,7 +112,7 @@ export default function RootLayout({ children }) {
     }
   }
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <title>Freelancer</title>
 
       {/* <link rel="shortcut icon" href={freelancer} type="image/x-icon" /> */}
@@ -212,6 +213,7 @@ export default function RootLayout({ children }) {
           <>
             <Header />
             <main>{children}</main>
+            <ScrollTop/>
           </>
         )}
       </body>
