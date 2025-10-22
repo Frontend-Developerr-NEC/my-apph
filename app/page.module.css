@@ -155,68 +155,37 @@
   left: 0%;
   z-index: -1;
   border-radius: 15px;
+  box-shadow: 0px 0px 10px rgb(255, 255, 255);
 }
 
-.VercelWrapper::before {
-  content: "";
-  /* color:#0033ff; */
-  background: linear-gradient(
-    100deg,
-    #ff0000,
-    #ff6200,
-    #ffd500,
-    #ccff00,
-    #40ff00,
-    #00ff9d,
-    #00fbff,
-    #0033ff
-  );
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  height: calc(100% + 4px);
-  width: calc(100% + 4px);
-  background-size: 600%;
-  z-index: -1;
-  filter: blur(7px);
-  transition: opacity 0.3s ease-in-out;
-  opacity: 1;
-  animation: TechCards 20s linear infinite;
+.linkA{
+height: max-content;
+width: max-content;
+color: rgb(0, 0, 0);
+text-decoration: none;
+background-color: rgb(40, 40, 202);
+padding: 15px;
+border-radius: 10px;
+letter-spacing: 2px;
+word-spacing: 2px;
 }
 
-/* Animation */
-@keyframes TechCards {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 500% 0%;
-  }
-  100% {
-    background-position: 0 0%;
-  }
-}
-
-.linkA {
-  height: max-content;
-  width: max-content;
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  background-color: rgb(44, 44, 220);
-  padding: 15px;
-  border-radius: 10px;
-  letter-spacing: 2px;
-  word-spacing: 2px;
-  outline: none;
-  border: 2px solid black;
-  filter: brightness(-15);
-  outline: none;
-}
-
-.reactLogo {
+.reactLogo{
   height: 60px;
   width: 60px;
-  border: 2px solid rgb(0, 0, 0);
+}
+.ReactWrapper,
+.NextjstWrapper,
+.GithubtWrapper,
+.VercelWrapper > a{
+letter-spacing: 2px;
+}
+.reactLogo,
+.nextjsLogo,
+.githubLogo,
+.vercelLogo {
+  height: 50px;
+  width: 50px;
   border-radius: 15px;
   padding: 10px;
   filter: brightness(50,50);
@@ -247,11 +216,7 @@
 
 .ReactWrapper > h4 {
   text-align: left;
-
   font-size: 22px;
-
-  font-size: 20px;
-
   color: #ffffff;
   letter-spacing: 2px;
 }
@@ -309,4 +274,3 @@
     grid-template: "vercel";
   }
 }
-
