@@ -5,7 +5,7 @@ import Image from "next/image";
 import menu from "../../../public/menu.png";
 
 import home from "../../../public/home1.png";
-import bus from "../../../public/bus.png";
+import calculator from "../../../public/calculator.png";
 import movies from "../../../public/clapperboard.png";
 import programmer from "../../../public/programmer.png";
 import account from "../../../public/account.png";
@@ -67,6 +67,15 @@ export default function Header() {
             >
               <Image src={movies} alt="=" className="movies" />
               Movies Hub
+            </Link>
+
+                        <Link
+              href="/calculator/"
+              className="Links"
+              onClick={() => setSidebar("close")}
+            >
+              <Image src={calculator} alt="=" className="calculator" />
+              Calculator
             </Link>
 
             <Link

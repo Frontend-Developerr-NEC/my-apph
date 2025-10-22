@@ -155,40 +155,71 @@
   left: 0%;
   z-index: -1;
   border-radius: 15px;
-  box-shadow: 0px 0px 10px rgb(255, 255, 255);
 }
 
-.linkA{
-height: max-content;
-width: max-content;
-color: rgb(0, 0, 0);
-text-decoration: none;
-background-color: rgb(40, 40, 202);
-padding: 15px;
-border-radius: 10px;
-letter-spacing: 2px;
-word-spacing: 2px;
+.VercelWrapper::before {
+  content: "";
+  background: linear-gradient(
+    100deg,
+    #ff0000,
+    #ff6200,
+    #ffd500,
+    #ccff00,
+    #40ff00,
+    #00ff9d,
+    #00fbff,
+    #0033ff
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  height: calc(100% + 4px);
+  width: calc(100% + 4px);
+  background-size: 600%;
+  z-index: -1;
+  filter: blur(7px);
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+  animation: TechCards 20s linear infinite;
 }
 
-.reactLogo{
+@keyframes TechCards {
+  0% {
+    background-position: 0, 0;
+  }
+  50% {
+    background-position: 500%, 0;
+  }
+  100% {
+    background-position: 0, 0;
+  }
+}
+
+.linkA {
+  height: max-content;
+  width: max-content;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  background-color: rgb(40, 40, 202);
+  padding: 15px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+}
+
+.reactLogo {
   height: 60px;
   width: 60px;
+  border-radius: 15px;
+  padding: 10px;
+  filter: brightness(50, 50);
+  border: 2px solid rgb(0, 0, 0);
 }
 .ReactWrapper,
 .NextjstWrapper,
 .GithubtWrapper,
-.VercelWrapper > a{
-letter-spacing: 2px;
-}
-.reactLogo,
-.nextjsLogo,
-.githubLogo,
-.vercelLogo {
-  height: 50px;
-  width: 50px;
-  border-radius: 15px;
-  padding: 10px;
-  filter: brightness(50,50);
+.VercelWrapper > a {
+  letter-spacing: 2px;
 }
 
 .nextjsLogo {
@@ -203,15 +234,15 @@ letter-spacing: 2px;
   height: 60px;
   width: 60px;
   border-radius: 50px;
-  filter: brightness(5,5);
+  filter: brightness(5, 5);
 }
 
 .vercelLogo {
   height: 60px;
   width: 60px;
   border-radius: 20px;
-  border: 2px solid rgb(255, 255, 255);
-  filter: brightness(5,5);
+  border: 2px solid rgb(0, 0, 0);
+  filter: brightness(5, 5);
 }
 
 .ReactWrapper > h4 {
@@ -258,11 +289,11 @@ letter-spacing: 2px;
     grid-auto-flow: row;
 
     grid-template-areas:
-       "react   nextjs" 
-       "github  vercel";
+      "react   nextjs"
+      "github  vercel";
   }
   .ReactWrapper {
-    grid-template: "react"; 
+    grid-template: "react";
   }
   .NextjstWrapper {
     grid-template: "nextjs";

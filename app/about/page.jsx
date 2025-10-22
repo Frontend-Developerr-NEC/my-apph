@@ -7,11 +7,9 @@ import Image from "next/image";
 import linkedin from "../../public/linkedin.png";
 import github from "../../public/github.png";
 export default function ProgramerHub() {
-
   return (
     <>
       <section className="ProgrammerHubConatiner">
-
         <section className="profiles">
           <div className="Linkedin">
             <Image src={linkedin} alt="linkedin" className="linkedin" />
@@ -30,9 +28,11 @@ export default function ProgramerHub() {
               <Image src={github} alt="github" className="Github" />
             </div>
             <span>Github</span>
-            <a className="a" href="https://github.com/Frontend-Developerr-NEC"
+            <a
+              className="a"
+              href="https://github.com/Frontend-Developerr-NEC?tab=repositories"
               target="_new"
-              >
+            >
               Check Now
             </a>
           </div>
