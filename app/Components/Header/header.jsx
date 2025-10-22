@@ -50,36 +50,16 @@ export default function Header() {
               <Image src={home} alt="=" className="home" />
               Home
             </Link>
-            {busPage == "open" && (
-              <>
-                <Link
-                  href="/bus_fairs/"
-                  className="Links"
-                  onClick={() => setSidebar("close")}
-                >
-                  <Image src={bus} alt="=" className="bus" />
-                  Bus Fair
-                </Link>
 
-                <Link
-                  href="/about/"
-                  className="Links"
-                  onClick={() => setSidebar("close")}
-                >
-                  <Image src={programmer} alt="=" className="programmer" />
-                  About Me
-                </Link>
+            <Link
+              href="/about/"
+              className="Links"
+              onClick={() => setSidebar("close")}
+            >
+              <Image src={programmer} alt="=" className="programmer" />
+              About Me
+            </Link>
 
-                <Link
-                  href="/account/"
-                  className="Links"
-                  onClick={() => setSidebar("close")}
-                >
-                  <Image src={account} alt="=" className="account" />
-                  Account
-                </Link>
-              </>
-            )}
             <Link
               href="/moviesHub/"
               className="Links"
@@ -87,6 +67,15 @@ export default function Header() {
             >
               <Image src={movies} alt="=" className="movies" />
               Movies Hub
+            </Link>
+
+            <Link
+              href="/account/"
+              className="Links"
+              onClick={() => setSidebar("close")}
+            >
+              <Image src={account} alt="=" className="account" />
+              Account
             </Link>
 
             <button

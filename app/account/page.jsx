@@ -23,13 +23,13 @@ export default function page() {
         <div className="AccountLogo" id="AccountLogo">
           A
         </div>
-        <label htmlFor="email" >
+        <label htmlFor="email">
           Username:
-          <span id="email" ></span>
+          <span id="email"></span>
         </label>
         <label htmlFor="password">
           Password:
-          <span id="password" ></span>
+          <span id="password"></span>
         </label>
       </section>
     </>
