@@ -18,6 +18,7 @@ export default function Calculator() {
             id="display"
             value={sum}
             onChange={(e) => {
+              e.preventDefault();
               e.target.value = sum;
             }}
           />
@@ -25,7 +26,8 @@ export default function Calculator() {
             <button
               type="button"
               className="operator"
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
                 setSum((sum += "+"));
               }}
             >
@@ -34,7 +36,8 @@ export default function Calculator() {
             <button
               type="button"
               className="numbers"
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
                 setSum((sum += "7"));
               }}
             >
@@ -43,7 +46,8 @@ export default function Calculator() {
             <button
               type="button"
               className="numbers"
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
                 setSum((sum += "8"));
               }}
             >
@@ -52,11 +56,12 @@ export default function Calculator() {
             <button
               type="button"
               className="numbers"
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
                 setSum((sum += "9"));
               }}
             >
-              8
+              9
             </button>
           </div>
 
@@ -64,7 +69,8 @@ export default function Calculator() {
             <button
               type="button"
               className="operator"
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
                 setSum((sum += "-"));
               }}
             >
@@ -73,7 +79,8 @@ export default function Calculator() {
             <button
               type="button"
               className="numbers"
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
                 setSum((sum += "6"));
               }}
             >
@@ -82,7 +89,8 @@ export default function Calculator() {
             <button
               type="button"
               className="numbers"
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
                 setSum((sum += "5"));
               }}
             >
@@ -91,7 +99,8 @@ export default function Calculator() {
             <button
               type="button"
               className="numbers"
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
                 setSum((sum += "4"));
               }}
             >
@@ -102,7 +111,8 @@ export default function Calculator() {
             <button
               type="button"
               className="operator"
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
                 setSum((sum += "*"));
               }}
             >
@@ -111,7 +121,8 @@ export default function Calculator() {
             <button
               type="button"
               className="numbers"
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
                 setSum((sum += "3"));
               }}
             >
@@ -120,7 +131,8 @@ export default function Calculator() {
             <button
               type="button"
               className="numbers"
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
                 setSum((sum += "2"));
               }}
             >
@@ -129,7 +141,8 @@ export default function Calculator() {
             <button
               type="button"
               className="numbers"
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
                 setSum((sum += "1"));
               }}
             >
@@ -140,7 +153,8 @@ export default function Calculator() {
             <button
               type="button"
               className="operator"
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
                 setSum((sum += "%"));
               }}
             >
@@ -148,8 +162,19 @@ export default function Calculator() {
             </button>
             <button
               type="button"
+              className="operator"
+              onClick={(e) => {
+                e.preventDefault();
+                setSum((sum += "."));
+              }}
+            >
+              .
+            </button>
+            <button
+              type="button"
               className="numbers"
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
                 setSum((sum += "0"));
               }}
             >
@@ -159,7 +184,40 @@ export default function Calculator() {
             <button
               type="button"
               className="operator"
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
+                setSum(sum.slice(0, sum.length - 1));
+              }}
+            >
+              &#8592;
+            </button>
+          </div>
+          <div className="r5">
+            <button
+              type="button"
+              className="operator"
+              onClick={(e) => {
+                e.preventDefault();
+                setSum(sum * sum);
+              }}
+            >
+              x&sup2;
+            </button>
+            <button
+              type="button"
+              className="operator"
+              onClick={(e) => {
+                e.preventDefault();
+                setSum(sum * sum * sum);
+              }}
+            >
+              x&sup3;
+            </button>
+            <button
+              type="button"
+              className="operator"
+              onClick={(e) => {
+                e.preventDefault();
                 setSum("");
               }}
             >
@@ -168,7 +226,8 @@ export default function Calculator() {
             <button
               type="button"
               className="operator"
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
                 try {
                   setSum(eval(sum));
                 } catch (error) {
