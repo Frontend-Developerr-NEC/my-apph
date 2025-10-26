@@ -6,31 +6,15 @@
   gap: 25px;
   background-color: black;
 }
-button{
+button {
   outline: none;
 }
-.moviesWrapper,
-.webseriesWrapper {
-  /* box-shadow: 4px 4px 10px rgb(210, 20, 77), -3px -3px 10px rgb(33, 83, 232); */
-    animation: movies 10s linear infinite ;
+.moviesWrapper {
+  background: linear-gradient(to bottom, #1ddfa8, #2c656e);
 }
 
-@keyframes movies{
-  0%{
-  box-shadow: 4px 4px 10px rgb(210, 20, 77), -3px -3px 10px rgb(33, 83, 232);
-  }
-  25%{
-  box-shadow: 4px 4px 10px rgb(33, 83, 232), -3px -3px 10px rgb(210, 20, 77);
-  }
-  50%{
-      box-shadow: 4px 4px 10px rgb(210, 20, 77), -3px -3px 10px rgb(33, 83, 232);
-  }
-  75%{
-  box-shadow: 4px 4px 10px rgb(33, 83, 232), -3px -3px 10px rgb(210, 20, 77);
-  }
-  100%{
-  box-shadow: 4px 4px 10px rgb(210, 20, 77), -3px -3px 10px rgb(33, 83, 232);
-  }
+.webseriesWrapper {
+  background: linear-gradient(to bottom, #1ddfa8, #2c656e);
 }
 
 .moviesWrapper {
@@ -44,6 +28,7 @@ button{
 
 span {
   font-size: 20px;
+  color: black;
 }
 
 .moviesWrapper > form {
@@ -56,6 +41,7 @@ span {
 .moviesWrapper > form > label {
   text-align: left;
   letter-spacing: 1px;
+  color: black;
 }
 
 .moviesWrapper > form > input {
@@ -74,7 +60,7 @@ span {
 .moviesWrapper > form > input:focus {
   outline: none;
   border: none;
-    border-bottom: 1px ridge whitesmoke;
+  border-bottom: 1px ridge whitesmoke;
   letter-spacing: 5px;
   color: red;
 }
@@ -87,7 +73,7 @@ span {
   font-weight: 700;
   border-radius: 10px;
   border: none;
-  box-shadow: 1px 1px 5px rgb(255, 255, 255);
+  background: linear-gradient(to right, #0bffba, #50b9c9, #0bffba);
 }
 /* Webs Series */
 .webseriesWrapper {
@@ -109,6 +95,7 @@ span {
 .webseriesWrapper > form > label {
   text-align: left;
   letter-spacing: 1px;
+  color: black;
 }
 
 .webseriesWrapper > form > input {
@@ -127,7 +114,7 @@ span {
 .webseriesWrapper > form > input:focus {
   outline: none;
   border: none;
-    border-bottom: 1px ridge whitesmoke;
+  border-bottom: 1px ridge whitesmoke;
   letter-spacing: 5px;
   color: red;
 }
@@ -140,16 +127,38 @@ span {
   font-weight: 700;
   border-radius: 10px;
   border: none;
-  box-shadow: 1px 1px 5px rgb(255, 255, 255);
+  background: linear-gradient(to right, #0bffba, #50b9c9, #0bffba);
+  outline: none;
 }
 
-@media screen and (min-width:615px) {
-  .hubContainer {
-  height: max-content;
-  display: grid;
-  grid-auto-flow: column;
+.movieSelector {
   text-align: center;
+  display: grid;
+  width: max-content;
   gap: 15px;
-  background-color: rgb(0, 0, 0);
+  grid-auto-flow: row;
+  padding: 20px 15px 20px 15px;
+  border: 2px solid whitesmoke;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
 }
+
+.movieSelector button {
+  height: 40px;
+  width: 250px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  letter-spacing: 2px;
+  background-color: rgb(13, 241, 241);
+}
+
+.movieSelector label {
+  filter: brightness(15, 15);
+  letter-spacing: 2px;
+  font-size: 20px;
+  color: blue;
 }

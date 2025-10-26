@@ -5,8 +5,11 @@ export default function page() {
   useEffect(() => {
     const StoredEmail = JSON.parse(localStorage.getItem("User")) || [];
 
+    const username = document.getElementById("username");
+    username.textContent = `${StoredEmail.Username}`.toLowerCase();
+
     const email = document.getElementById("email");
-    email.textContent = `${StoredEmail.Username}`.toLowerCase();
+    email.textContent = `${StoredEmail.Email}`.toLowerCase();
 
     const password = document.getElementById("password");
     password.textContent = `${StoredEmail.Password}`.toLowerCase();
@@ -23,8 +26,12 @@ export default function page() {
         <div className="AccountLogo" id="AccountLogo">
           A
         </div>
-        <label htmlFor="email">
+        <label htmlFor="username">
           Username:
+          <span id="username"></span>
+        </label>
+        <label htmlFor="email">
+          Email:
           <span id="email"></span>
         </label>
         <label htmlFor="password">

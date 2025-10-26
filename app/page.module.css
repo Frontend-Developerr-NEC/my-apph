@@ -1,8 +1,14 @@
 .programmingLanguage {
   display: grid;
   grid-auto-flow: row;
-  gap: 25px;
+  gap: 20px;
   position: relative;
+  grid-template-columns: repeat(1, minmax(150px, 400px));
+  grid-template-areas:
+    "react"
+    "nextjs"
+    "github"
+    "vercel";
 }
 
 .ReactWrapper,
@@ -17,6 +23,7 @@
   text-align: justify;
   justify-content: center;
   grid-template-columns: minmax(200px, 400px);
+
   border-radius: 17px;
   position: relative;
   outline: none;
@@ -283,25 +290,104 @@
   /* word-spacing: 2px; */
 }
 
-@media screen and (min-width: 615px) {
+.ReactWrapper {
+  grid-area: react;
+}
+.NextjstWrapper {
+  grid-area: nextjs;
+}
+.GithubtWrapper {
+  grid-area: github;
+}
+.VercelWrapper {
+  grid-area: vercel;
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .ReactWrapper,
+  .NextjstWrapper,
+  .GithubtWrapper,
+  .VercelWrapper {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 15px;
+    height: max-content;
+    padding: 20px;
+    text-align: justify;
+    justify-content: center;
+    grid-template-columns: minmax(150px, 400px);
+    border-radius: 17px;
+    position: relative;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    z-index: 0;
+  }
   .programmingLanguage {
     display: grid;
     grid-auto-flow: row;
-
+    grid-template-columns: repeat(2, minmax(150px, 400px));
     grid-template-areas:
       "react   nextjs"
       "github  vercel";
   }
-  .ReactWrapper {
-    grid-template: "react";
-  }
-  .NextjstWrapper {
-    grid-template: "nextjs";
-  }
-  .GithubtWrapper {
-    grid-template: "github";
-  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .ReactWrapper,
+  .NextjstWrapper,
+  .GithubtWrapper,
   .VercelWrapper {
-    grid-template: "vercel";
+    display: grid;
+    grid-auto-flow: row;
+    gap: 15px;
+    height: max-content;
+    padding: 20px;
+    text-align: justify;
+    justify-content: center;
+    grid-template-columns: minmax(150px, 400px);
+    border-radius: 17px;
+    position: relative;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    z-index: 0;
+  }
+  .programmingLanguage {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, minmax(150px, 400px));
+    grid-template-areas:
+      "react nextjs github"
+      "vercel nextjs github";
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .ReactWrapper,
+  .NextjstWrapper,
+  .GithubtWrapper,
+  .VercelWrapper {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 15px;
+    height: max-content;
+    padding: 20px;
+    text-align: justify;
+    justify-content: center;
+    grid-template-columns: minmax(150px, 400px);
+    border-radius: 17px;
+    position: relative;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    z-index: 0;
+  }
+  .programmingLanguage {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, minmax(150px, 400px));
+    grid-template-areas:
+      "react nextjs github"
+      "vercel nextjs github";
   }
 }

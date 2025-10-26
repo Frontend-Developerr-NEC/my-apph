@@ -198,7 +198,11 @@ export default function Calculator() {
               className="operator"
               onClick={(e) => {
                 e.preventDefault();
-                setSum(sum * sum);
+
+                // setSum((sum += "."));
+                const sq = (document.createElement("span").textContent =
+                  "&sup2");
+                setSum((sum += sum * sum));
               }}
             >
               x&sup2;
@@ -208,7 +212,7 @@ export default function Calculator() {
               className="operator"
               onClick={(e) => {
                 e.preventDefault();
-                setSum(sum * sum * sum);
+                setSum((sum += sum * sum));
               }}
             >
               x&sup3;

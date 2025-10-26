@@ -1,8 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import "./page.css";
 export default function Movieshub() {
+  const [movie, setMovie] = useState("");
   function movieHandler(e) {
     e.preventDefault();
 
@@ -48,41 +49,63 @@ export default function Movieshub() {
     if (season >= 1 && season <= 9) {
       s = true;
     }
-    let valid = s == true ? "0"+season : season > 9 ? season : "0"+season;
+    let valid = s == true ? "0" + season : season > 9 ? season : "0" + season;
 
+    const api2 = `https://isaidub.free/movie/${webseries}-season-${valid}-tamil-dubbed-movie/`;
 
-        const api2 = `https://isaidub.free/movie/${webseries}-season-${valid}-tamil-dubbed-movie/`;
+    window.location.href = api2;
+    webseries = "";
+    season = "";
+  }
 
-        window.location.href = api2;
-        webseries = "";
-        season = "";
-
-      }
-    
-  
   return (
     <>
       <div className="hubContainer">
-        <div className="moviesWrapper">
-          <span>Movies Hub</span>
-          <form onSubmit={movieHandler}>
-            <label>Movie Name:</label>
-            <input name="movie" />
-            <label>Quality (360p or 720p):</label>
-            <input name="quality" />
-            <button type="submit">Search</button>
-          </form>
+        <div className="movieSelector">
+          <label>Select 1 Option Below</label>
+          <button
+            type="button"
+            onClick={(e) => {
+              e.preventDefault();
+              setMovie("movie");
+            }}
+          >
+            Movie
+          </button>
+          <button
+            type="button"
+            onClick={(e) => {
+              e.preventDefault();
+              setMovie("web series");
+            }}
+          >
+            Web Series
+          </button>
         </div>
-        <div className="webseriesWrapper">
-          <span>Web Series Hub</span>
-          <form onSubmit={webseriesHandler}>
-            <label>WebSeries Name:</label>
-            <input name="webseries" />
-            <label>Season:</label>
-            <input name="season" />
-            <button type="submit">Search</button>
-          </form>
-        </div>
+        {movie == "movie" && (
+          <div className="moviesWrapper">
+            <span>Movies Hub</span>
+            <form onSubmit={movieHandler}>
+              <label>Movie Name:</label>
+              <input name="movie" />
+              <label>Quality (360p or 720p):</label>
+              <input name="quality" />
+              <button type="submit">Search</button>
+            </form>
+          </div>
+        )}
+        {movie == "web series" && (
+          <div className="webseriesWrapper">
+            <span>Web Series Hub</span>
+            <form onSubmit={webseriesHandler}>
+              <label>Web Series Name:</label>
+              <input name="webseries" />
+              <label>Season:</label>
+              <input name="season" />
+              <button type="submit">Search</button>
+            </form>
+          </div>
+        )}
       </div>
     </>
   );
