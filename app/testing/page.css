@@ -1,58 +1,109 @@
-.todoContainer{
+.todoContainer {
   height: max-content;
   width: max-content;
   padding: 15px;
-  border: 2px solid salmon;
   display: flex;
   flex-direction: column;
+  border-radius: 15px;
   gap: 15px;
+  box-shadow: 1px 1px 15px whitesmoke;
+  background: linear-gradient(to bottom, #cdcaca, #cdcaca);
 }
 
-.todoContainer span{
+.todoContainer span {
   text-align: center;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: 900;
+  color: black;
 }
 
-.todoInput{
+.todoInput {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  align-items: center;
+  gap: 15px;
+  position: relative;
 }
 
-.todoInput input{
+.todoInput input {
   height: 40px;
   font-size: 18px;
   padding: 0% 10px;
   letter-spacing: 2px;
+  outline: none;
+  border: none;
+  border-bottom: 1px ridge rgb(0, 0, 0);
+  background-color: transparent;
+  color: rgb(0, 0, 0);
 }
 
-.todoInput button{
+.todoInput button {
   height: 40px;
-  width: 100%;
+  width: 150px;
+  background-color: rgb(0, 208, 255);
+  border: 2px solid rgb(0, 208, 255);
+  box-shadow: 1px 1px 15px rgb(0, 0, 0);
+  outline: none;
+  border-radius: 10px;
+  font-size: 20px;
+  letter-spacing: 2px;
 }
 
-.todoLists{
-  /* padding: 7px; */
+.todoLists {
+  padding: 7px;
   margin: 15px 0px 0px 0px;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
   gap: 10px;
+  border: 2px solid black;
+  height: 265px;
+  border-radius: 10px;
 }
 
-.todoList{
+.todoLists:empty::after {
+  content: "No tasks yet. Add Some!";
+  text-align: center;
+  color: rgb(0, 0, 0);
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.todoList {
   display: flex;
   border-radius: 10px;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border: 2px solid saddlebrown;
+  border: 2px solid rgb(0, 0, 0);
   height: max-content;
-  padding: 10px 5px;
+  padding: 10px 10px;
 }
 
-.todoList button{
+.todoList span {
+  font-size: 18px;
+  font-variant: small-caps;
+  letter-spacing: 2px;
+  overflow-x: scroll;
+  padding: 0% 10px 0% 0%;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  width: 200px;
+}
+
+.todoList button {
   height: 30px;
   width: 30px;
-  border-radius: 50%;
+  border-radius: 5px;
   outline: none;
   border: none;
+  background-color: red;
+  color: whitesmoke;
+  font-size: 20px;
 }

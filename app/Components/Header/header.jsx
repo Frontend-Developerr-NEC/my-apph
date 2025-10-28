@@ -83,7 +83,7 @@ export default function Header() {
               className="Links"
               onClick={() => setSidebar("close")}
             >
-              Testing
+              Todo List
             </Link>
 
             <Link

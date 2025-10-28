@@ -1,61 +1,79 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import "./page.css";
 export default function Testing() {
+  const [todo, setTodo] = useState("");
+  const [todoList, setTodolist] = useState([]);
+  useEffect(() => {
+    const todoLS = JSON.parse(localStorage.getItem("Todos"));
+    if (todoLS) {
+      setTodolist(todoLS);
+    }
+    console.log(todoList);
+  }, []);
   function addTodo(e) {
     e.preventDefault();
-    const todoTxt = document.getElementById("todo").value;
-
-    if (todoTxt !== "") {
-      const todoLists = document.querySelector(".todoLists");
-
-      const todoList = document.createElement("div");
-      todoList.className = "todoList";
-
-      const todo = document.createElement("span");
-      todo.textContent = todoTxt;
-
-      const deleteTodo = document.createElement("button");
-      deleteTodo.textContent = "X";
-
-      const todoData = localStorage.getItem("todos") || [];
-
-      let data = { id: 1, todo: todoTxt, createdAt: new Date().toUTCString() };
-
-      todoLists.appendChild(todoList);
-      todoList.appendChild(todo);
-      todoList.appendChild(deleteTodo);
-
-      localStorage.setItem("todos", JSON.stringify(data));
-
-      console.log(JSON.parse(todoData));
-    }
+    if (todo == "") return;
+    setTodolist([...todoList, { id: Date.now(), text: todo }]);
+    localStorage.setItem("Todos", JSON.stringify(todoList));
+    setTodo("");
   }
 
-  function deleteTodo(e) {
-    e.preventDefault();
-    
+  function deleteTodo(id) {
+    const filter = todoList.filter((item) => item.id !== id);
+    setTodolist(filter);
+    localStorage.setItem("Todos", JSON.stringify(filter));
   }
   return (
     <>
       <section className="todoContainer">
-        <span>Todo</span>
-        <div>
-          <div className="todoInput">
-            <input type="text" id="todo" />
-            <button type="button" onClick={addTodo}>
-              Add
-            </button>
-          </div>
-          <div className="todoLists">
-            <div className="todoList">
-              <span>Eating</span>
-              <button type="button" onClick={deleteTodo}>
+        <span>To-Do List</span>
+        <div className="todoInput">
+          <input
+            type="text"
+            placeholder="Add New Task"
+            value={todo}
+            onKeyUp={(e) => {
+              if (e.key == "Enter") {
+                addTodo(e);
+              }
+            }}
+            onChange={(e) => {
+              setTodo(e.target.value);
+            }}
+          />
+          <button type="button" onClick={addTodo}>
+            Add
+          </button>
+        </div>
+        <ul className="todoLists">
+          {todoList.map((index) => (
+            <div key={index.id} className="todoList">
+              <span>{index.text}</span>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  deleteTodo(index.id);
+                }}
+              >
                 X
               </button>
             </div>
-          </div>
-        </div>
+          ))}
+
+          {/* <div className="todoList">
+            <span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+              dolorum totam, rem, eius nisi accusantium error cupiditate earum
+              pariatur laudantium eos quaerat, culpa doloremque atque?
+            </span>
+            <button type="button" onClick={deleteTodo}>
+              X
+            </button>
+          </div> */}
+        </ul>
       </section>
     </>
   );
