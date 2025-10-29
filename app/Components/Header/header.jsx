@@ -87,6 +87,14 @@ export default function Header() {
             </Link>
 
             <Link
+              href="/cards/"
+              className="Links"
+              onClick={() => setSidebar("close")}
+            >
+              Virtual Cards
+            </Link>
+
+            <Link
               href="/account/"
               className="Links"
               onClick={() => setSidebar("close")}

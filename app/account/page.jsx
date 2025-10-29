@@ -2,6 +2,15 @@
 import { useEffect } from "react";
 import "./page.css";
 export default function page() {
+  function load() {
+    const Card = document.getElementById("AccountContainer");
+
+    Card.addEventListener("click", (e) => {
+      e.stopPropagation();
+      //  Card.style.transform="rotateZ(90deg)"
+    });
+  }
+
   useEffect(() => {
     const StoredEmail = JSON.parse(localStorage.getItem("User")) || [];
 
@@ -22,8 +31,8 @@ export default function page() {
   }, []);
   return (
     <>
-      <section className="AccountContainer">
-        <div className="AccountLogo" id="AccountLogo">
+      <section id="AccountContainer" onClick={load}>
+        {/* <div className="AccountLogo" id="AccountLogo">
           A
         </div>
         <label htmlFor="username">
@@ -37,6 +46,20 @@ export default function page() {
         <label htmlFor="password">
           Password:
           <span id="password"></span>
+        </label> */}
+        <label htmlFor="username">
+          Name<span id="username"></span>
+        </label>
+        <div className="LogoConatiner">
+          <div className="AccountLogo" id="AccountLogo">
+            A
+          </div>
+        </div>
+        <label htmlFor="email">
+          Email<span id="email"></span>
+        </label>
+        <label htmlFor="password">
+          Password<span id="password"></span>
         </label>
       </section>
     </>
