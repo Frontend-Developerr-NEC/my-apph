@@ -22,6 +22,7 @@ export default function Calculator() {
               e.target.value = sum;
             }}
           />
+          <span id="backSum"></span>
           <div className="r1">
             <button
               type="button"
@@ -155,7 +156,7 @@ export default function Calculator() {
               className="operator"
               onClick={(e) => {
                 e.preventDefault();
-                setSum((sum += "%"));
+                setSum((sum += "/"));
               }}
             >
               &divide;
@@ -186,7 +187,10 @@ export default function Calculator() {
               className="operator"
               onClick={(e) => {
                 e.preventDefault();
-                setSum(sum.slice(0, sum.length - 1));
+                // setSum(sums => String(sums).slice(0, String(sums).length - 1));
+                setSum((prevSum) =>
+                  String(prevSum).slice(0, String(prevSum).length - 1)
+                );
               }}
             >
               &#8592;
@@ -200,9 +204,8 @@ export default function Calculator() {
                 e.preventDefault();
 
                 // setSum((sum += "."));
-                const sq = (document.createElement("span").textContent =
-                  "&sup2");
-                setSum((sum += sum * sum));
+                document.createElement("span").textContent = "&sup2";
+                setSum((sum += sum ** 2));
               }}
             >
               x&sup2;
@@ -212,7 +215,7 @@ export default function Calculator() {
               className="operator"
               onClick={(e) => {
                 e.preventDefault();
-                setSum((sum += sum * sum));
+                setSum((sum += sum ** 3));
               }}
             >
               x&sup3;
@@ -222,6 +225,7 @@ export default function Calculator() {
               className="operator"
               onClick={(e) => {
                 e.preventDefault();
+                document.getElementById("backSum").textContent = "";
                 setSum("");
               }}
             >
@@ -232,6 +236,8 @@ export default function Calculator() {
               className="operator"
               onClick={(e) => {
                 e.preventDefault();
+
+                document.getElementById("backSum").textContent = `${sum}`;
                 try {
                   setSum(eval(sum));
                 } catch (error) {

@@ -8,6 +8,14 @@
   background-color: transparent;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+#backSum{
+  position: absolute;
+  top: 35px;
+  left: 40px;
+  font-size: 18px;
 }
 
 .calculatorWrapper {
@@ -21,7 +29,7 @@
   overflow: hidden;
   border: none;
   outline: none;
-  box-shadow: 0px 0px 15px #f5f5f5;
+  box-shadow: 0px 0px 15px 4px #00dbfd;
   /* -2px -2px 15px rgb(255, 255, 255); */
 }
 
@@ -46,7 +54,8 @@
   height: 40px;
   width: 50px;
   border-radius: 10px;
-  background-color: #00ccff;
+  /* background-color: #00ccff; */
+  background-color: #f6ff00;
   /* color: rgb(0, 38, 255); */
   color: rgb(0, 0, 0);
   border: none;
