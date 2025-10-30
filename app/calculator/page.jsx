@@ -155,7 +155,7 @@ export default function Calculator() {
               className="operator"
               onClick={(e) => {
                 e.preventDefault();
-                setSum((sum += "%"));
+                setSum((sum += "/"));
               }}
             >
               &divide;
