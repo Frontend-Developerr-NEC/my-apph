@@ -1,11 +1,11 @@
 "use client";
-import { useEffect } from "react";
+
+import Working from "../Components/working/working";
 import "./page.css";
 export default function Cards() {
-  useEffect(() => {}, []);
   return (
     <>
-
+      <Working />
     </>
   );
 }

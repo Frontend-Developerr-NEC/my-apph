@@ -62,7 +62,7 @@ export default function Movieshub() {
     <>
       <div className="hubContainer">
         <div className="movieSelector">
-          <label>Select 1 Option Below</label>
+          <label>Movies Hub Section</label>
           <button
             type="button"
             onClick={(e) => {

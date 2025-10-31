@@ -79,7 +79,7 @@ export default function Header() {
             </Link>
 
             <Link
-              href="/testing/"
+              href="/todo/"
               className="Links"
               onClick={() => setSidebar("close")}
             >

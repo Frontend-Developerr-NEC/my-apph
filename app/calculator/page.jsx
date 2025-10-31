@@ -202,23 +202,20 @@ export default function Calculator() {
               className="operator"
               onClick={(e) => {
                 e.preventDefault();
-
-                // setSum((sum += "."));
-                document.createElement("span").textContent = "&sup2";
-                setSum((sum += sum ** 2));
+                setSum((sum += "("));
               }}
             >
-              x&sup2;
+              (
             </button>
             <button
               type="button"
               className="operator"
               onClick={(e) => {
                 e.preventDefault();
-                setSum((sum += sum ** 3));
+                setSum((sum += ")"));
               }}
             >
-              x&sup3;
+              )
             </button>
             <button
               type="button"

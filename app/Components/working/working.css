@@ -1,0 +1,28 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+#workingPageContainer {
+  height: max-content;
+  width: max-content;
+  display: grid;
+  place-items: center;
+  grid-template-columns: minmax(200px, 300px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.workingPageWrapper {
+  display: grid;
+  place-items: center;
+  grid-template-columns: minmax(200px, 300px);
+  height: 300px;
+  width: 300px;
+}
+

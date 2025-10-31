@@ -1,9 +1,10 @@
 .todoContainer {
   height: max-content;
-  width: max-content;
+
   padding: 15px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: minmax(200px, 325px);
   border-radius: 15px;
   gap: 15px;
   box-shadow: 1px 1px 15px whitesmoke;
@@ -36,6 +37,8 @@
   border-bottom: 1px ridge rgb(0, 0, 0);
   background-color: transparent;
   color: rgb(0, 0, 0);
+width: 100%;
+margin: 0% 30px;
 }
 
 .todoInput button {

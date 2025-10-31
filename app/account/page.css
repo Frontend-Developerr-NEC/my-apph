@@ -96,12 +96,13 @@
 #AccountContainer > label:nth-child(1) > span {
   font-size: 18px;
   font-weight: 700;
-  color: rgb(235, 235, 235);
+  color: rgb(255, 255, 255);
   border: 2px solid rgb(255, 0, 0);
   letter-spacing: 5px;
   font-style: oblique;
   transform: translateX(0px);
   width: 191px;
+  text-align: center;
 }
 
 #AccountContainer > label:nth-child(3) > span {
