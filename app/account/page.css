@@ -86,7 +86,6 @@
   transform: translateX(50px);
   width: 150px;
   text-align: left;
-  border: 2px solid rgb(255, 0, 0);
   overflow-x: auto;
   padding: 7px 20px;
   border-radius: 10px;
@@ -97,12 +96,14 @@
   font-size: 18px;
   font-weight: 700;
   color: rgb(255, 255, 255);
-  border: 2px solid rgb(255, 0, 0);
+  /* border: 2px solid rgb(255, 0, 0); */
   letter-spacing: 5px;
   font-style: oblique;
   transform: translateX(0px);
   width: 191px;
   text-align: center;
+  letter-spacing: 5px;
+  /* word-spacing: 3px; */
 }
 
 #AccountContainer > label:nth-child(3) > span {
