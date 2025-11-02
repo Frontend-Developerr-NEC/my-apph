@@ -2,14 +2,12 @@
 
 import "./globals.css";
 import Header from "./Components/Header/header";
-import ScrollTop from "./Components/scrolltop/scrolltop"
+import ScrollTop from "./Components/scrolltop/scrolltop";
 import bcrypt from "bcryptjs";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-// const meta = {
-//   title:"Freelancer"
-// }
+
 import register from "../public/add-user.png";
 import login from "../public/login-.png";
 
@@ -18,6 +16,8 @@ export default function RootLayout({ children }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [pageToggle, setPageToggle] = useState("Register");
+  // const [theme, toggleTheme] = useContext(ThemeContext);
+  // const [theme, setTheme] = useState('light');
 
   const router = useRouter();
   useEffect(() => {
@@ -211,9 +211,11 @@ export default function RootLayout({ children }) {
         )}
         {pageToggle == "HomePage" && (
           <>
+            {/* <ThemeProvider> */}
             <Header />
             <main>{children}</main>
-            <ScrollTop/>
+            <ScrollTop />
+            {/* </ThemeProvider> */}
           </>
         )}
       </body>
