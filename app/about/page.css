@@ -17,15 +17,69 @@
 }
 
 .Linkedin {
-  /* background: linear-gradient(to right top, #000000, #c4bebe); */
+  overflow: hidden;
+  position: relative;
+}
+
+.Linkedin .linkedin,
+span,
+.a {
+  z-index: 1;
+}
+
+.Linkedin::before {
+  content: "";
+  height: 200px;
+  width: 100%;
+  background-image: linear-gradient(0deg, #ff0000, #f700ff);
+  /* background: linear-gradient(180deg, #ff0000, #f700ff); */
+  animation: rotate 3s linear infinite;
+  transition: all 0.5s linear;
+  position: absolute;
+}
+.Linkedin::after {
+  inset: 5px;
+  content: "";
+  position: absolute;
   background: linear-gradient(to right top, #c4bebe, #000000);
-  border: 2px solid rgb(163, 160, 160);
+  border-radius: 15px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .github {
-  /* background: linear-gradient(to right top, #000000, #c4bebe); */
+  overflow: hidden;
+  position: relative;
+}
+.github .githubimgWrapper,
+span,
+.a {
+  z-index: 1;
+}
+
+.github::before {
+  content: "";
+  height: 200px;
+  width: 100%;
+  background-image: linear-gradient(0deg, #ff0000, #f700ff);
+  /* background: linear-gradient(180deg, #ff0000, #f700ff); */
+  animation: rotate 4s linear infinite;
+  transition: all 0.2s linear;
+  position: absolute;
+}
+.github::after {
+  content: "";
+  position: absolute;
   background: linear-gradient(to right top, #c4bebe, #000000);
-  border: 2px solid rgb(167, 166, 166);
+  border-radius: 15px;
+  inset: 5px;
 }
 
 .Linkedin,
@@ -53,7 +107,7 @@
   color: rgb(0, 170, 255);
   font-size: 20px;
   letter-spacing: 2px;
-  filter: brightness(15,15);
+  filter: brightness(15, 15);
 }
 
 .githubimgWrapper {
@@ -82,7 +136,7 @@
   color: rgb(0, 0, 0);
   font-size: 20px;
   letter-spacing: 2px;
-  filter: brightness(10,10);
+  filter: brightness(10, 10);
 }
 
 .a {

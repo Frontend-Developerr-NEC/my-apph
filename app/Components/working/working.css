@@ -18,6 +18,21 @@
   font-weight: bold;
 }
 
+.workingPageWrapper span{
+  color: #4A90E2;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  animation: blink 1.5s infinite; 
+  letter-spacing: 3px;
+
+
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 .workingPageWrapper {
   display: grid;
   place-items: center;
