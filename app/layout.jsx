@@ -2,7 +2,7 @@
 
 import "./globals.css";
 // import {signIn} from "next-auth/react";
-import Header from "./Components/Header/header";
+// import Header from "./Components/Header/header";
 import ScrollTop from "./Components/scrolltop/scrolltop";
 import bcrypt from "bcryptjs";
 import { useEffect, useState } from "react";
@@ -225,7 +225,6 @@ export default function RootLayout({ children }) {
         )}
         {pageToggle == "HomePage" && (
           <>
-            <Header />
             {children}
             <ScrollTop />
           </>

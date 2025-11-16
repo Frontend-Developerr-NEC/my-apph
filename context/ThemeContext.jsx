@@ -1,5 +1,7 @@
 import { createContext, useContext, useState } from "react";
-import "../app/globals.css"
+import "../app/globals.css";
+import Header from "../app/Components/Header/header";
+// import ScrollTop from "../app/Components/scrolltop/scrolltop";
 export const ThemeContext = createContext({
   theme: "light",
   setTheme: () => {},
@@ -10,8 +12,10 @@ export const ThemeProvider = ({ children }) => {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <body className={theme}>
-        <main className={theme}>{children}</main>
+      <body>
+        <Header />
+        {/* <div className="ToastAlert">{...props}</div> */}
+        <main>{children}</main>
       </body>
     </ThemeContext.Provider>
   );

@@ -1,8 +1,4 @@
-@media screen and (prefers-color-scheme: dark) {
-}
 
-@media screen and (prefers-color-scheme: light) {
-}
 
 .hubContainer {
   height: max-content;
@@ -12,9 +8,38 @@
   gap: 25px;
   background-color: black;
 }
-button {
-  outline: none;
+
+/* .movieSelector{
+  display: flex;
+  flex-direction: column;
+} */
+
+.tamildubmovies,.tamilmovies{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 15px;
 }
+
+.tamildubmovies,.tamilmovies label {
+  filter: brightness(15, 15);
+  letter-spacing: 2px;
+  font-size: 20px;
+  color: blue;
+}
+
+ button {
+  height: max-content;
+  width: 250px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  letter-spacing: 2px;
+  background-color: rgb(13, 241, 241);
+  padding: 10px;
+}
+
 .moviesWrapper {
   background: linear-gradient(to bottom, #1ddfa8, #2c656e);
 }
@@ -151,20 +176,6 @@ span {
   border-radius: 20px;
 }
 
-.movieSelector button {
-  height: 40px;
-  width: 250px;
-  border-radius: 10px;
-  outline: none;
-  border: none;
-  font-size: 20px;
-  letter-spacing: 2px;
-  background-color: rgb(13, 241, 241);
-}
 
-.movieSelector label {
-  filter: brightness(15, 15);
-  letter-spacing: 2px;
-  font-size: 20px;
-  color: blue;
-}
+
+

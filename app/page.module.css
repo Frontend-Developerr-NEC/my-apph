@@ -1,4 +1,3 @@
-@media screen and (prefers-color-scheme: dark) {
   .programmingLanguage {
     display: grid;
     grid-auto-flow: row;
@@ -20,318 +19,11 @@
     grid-auto-flow: row;
     gap: 15px;
     height: max-content;
-    padding: 20px;
+    padding: 15px 15px;
     text-align: justify;
     justify-content: center;
     grid-template-columns: minmax(200px, 400px);
-
-    border-radius: 17px;
-    position: relative;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    z-index: 0;
-  }
-  /* React */
-  .ReactWrapper::after {
-    content: "";
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-color: #1d1c1c;
-    top: 0%;
-    left: 0%;
-    z-index: -1;
-    border-radius: 15px;
-  }
-
-  .ReactWrapper::before {
-    content: "";
-    /* color:#0033ff; */
-    background: linear-gradient(
-      100deg,
-      #ff0000,
-      #ff6200,
-      #ffd500,
-      #ccff00,
-      #40ff00,
-      #00ff9d,
-      #00fbff,
-      #0033ff
-    );
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    height: calc(100% + 4px);
-    width: calc(100% + 4px);
-    background-size: 600%;
-    z-index: -1;
-    filter: blur(7px);
-    transition: opacity 0.3s ease-in-out;
-    opacity: 1;
-    animation: TechCards 20s linear infinite;
-  }
-
-  /* NextJs */
-  .NextjstWrapper::after {
-    content: "";
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-color: #1d1c1c;
-    top: 0%;
-    left: 0%;
-    z-index: -1;
-    border-radius: 15px;
-  }
-
-  .NextjstWrapper::before {
-    content: "";
-    /* color:#0033ff; */
-    background: linear-gradient(
-      100deg,
-      #ff0000,
-      #ff6200,
-      #ffd500,
-      #ccff00,
-      #40ff00,
-      #00ff9d,
-      #00fbff,
-      #0033ff
-    );
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    height: calc(100% + 4px);
-    width: calc(100% + 4px);
-    background-size: 600%;
-    z-index: -1;
-    filter: blur(7px);
-    transition: opacity 0.3s ease-in-out;
-    opacity: 1;
-    animation: TechCards 20s linear infinite;
-  }
-
-  /* Github */
-  .GithubtWrapper::after {
-    content: "";
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-color: #1d1c1c;
-    top: 0%;
-    left: 0%;
-    z-index: -1;
-    border-radius: 15px;
-  }
-
-  .GithubtWrapper::before {
-    content: "";
-    /* color:#0033ff; */
-    background: linear-gradient(
-      100deg,
-      #ff0000,
-      #ff6200,
-      #ffd500,
-      #ccff00,
-      #40ff00,
-      #00ff9d,
-      #00fbff,
-      #0033ff
-    );
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    height: calc(100% + 4px);
-    width: calc(100% + 4px);
-    background-size: 600%;
-    z-index: -1;
-    filter: blur(7px);
-    transition: opacity 0.3s ease-in-out;
-    opacity: 1;
-    animation: TechCards 20s linear infinite;
-  }
-
-  /* Vercel */
-  .VercelWrapper::after {
-    content: "";
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-color: #1d1c1c;
-    top: 0%;
-    left: 0%;
-    z-index: -1;
-    border-radius: 15px;
-  }
-
-  .VercelWrapper::before {
-    content: "";
-    background: linear-gradient(
-      100deg,
-      #ff0000,
-      #ff6200,
-      #ffd500,
-      #ccff00,
-      #40ff00,
-      #00ff9d,
-      #00fbff,
-      #0033ff
-    );
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    height: calc(100% + 4px);
-    width: calc(100% + 4px);
-    background-size: 600%;
-    z-index: -1;
-    filter: blur(7px);
-    transition: opacity 0.3s ease-in-out;
-    opacity: 1;
-    animation: TechCards 20s linear infinite;
-  }
-
-  @keyframes TechCards {
-    0% {
-      background-position: 0, 0;
-    }
-    50% {
-      background-position: 500%, 0;
-    }
-    100% {
-      background-position: 0, 0;
-    }
-  }
-
-  .linkA {
-    height: max-content;
-    width: max-content;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    background-color: rgb(40, 40, 202);
-    padding: 15px;
-    border-radius: 10px;
-    letter-spacing: 2px;
-    word-spacing: 2px;
-  }
-
-  .reactLogo {
-    height: 60px;
-    width: 60px;
-    border-radius: 15px;
-    padding: 10px;
-    filter: brightness(50, 50);
-    border: 2px solid rgb(0, 0, 0);
-  }
-  .ReactWrapper,
-  .NextjstWrapper,
-  .GithubtWrapper,
-  .VercelWrapper > a {
-    letter-spacing: 2px;
-  }
-
-  .nextjsLogo {
-    height: 60px;
-    width: 60px;
-    border-radius: 25px;
-    border: 2px solid rgb(0, 0, 0);
-    filter: brightness(5);
-  }
-
-  .githubLogo {
-    height: 60px;
-    width: 60px;
-    border-radius: 50px;
-    filter: brightness(5, 5);
-  }
-
-  .vercelLogo {
-    height: 60px;
-    width: 60px;
-    border-radius: 20px;
-    border: 2px solid rgb(0, 0, 0);
-    filter: brightness(5, 5);
-  }
-
-  .ReactWrapper > h4 {
-    text-align: left;
-    font-size: 22px;
-    color: #ffffff;
-    letter-spacing: 2px;
-  }
-
-  .NextjstWrapper > h4 {
-    text-align: left;
-    font-size: 20px;
-    color: #ffffff;
-    letter-spacing: 4px;
-  }
-
-  .GithubtWrapper > h4 {
-    text-align: left;
-    font-size: 20px;
-    color: #ffffff;
-    letter-spacing: 3px;
-  }
-
-  .VercelWrapper > h4 {
-    text-align: left;
-    font-size: 20px;
-    color: #ffffff;
-    letter-spacing: 3px;
-  }
-
-  .ReactWrapper,
-  .NextjstWrapper,
-  .GithubtWrapper,
-  .VercelWrapper > p {
-    color: rgb(235 236 240);
-    font-size: 19px;
-    letter-spacing: 2px;
-    /* word-spacing: 2px; */
-  }
-
-  .ReactWrapper {
-    grid-area: react;
-  }
-  .NextjstWrapper {
-    grid-area: nextjs;
-  }
-  .GithubtWrapper {
-    grid-area: github;
-  }
-  .VercelWrapper {
-    grid-area: vercel;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .programmingLanguage {
-    display: grid;
-    grid-auto-flow: row;
-    gap: 20px;
-    position: relative;
-    grid-template-columns: repeat(1, minmax(150px, 400px));
-    grid-template-areas:
-      "react"
-      "nextjs"
-      "github"
-      "vercel";
-  }
-
-  .ReactWrapper,
-  .NextjstWrapper,
-  .GithubtWrapper,
-  .VercelWrapper {
-    display: grid;
-    grid-auto-flow: row;
-    gap: 15px;
-    height: max-content;
-    padding: 20px;
-    text-align: justify;
-    justify-content: center;
-    grid-template-columns: minmax(200px, 400px);
-    background-color: rgb(117, 114, 114);
+    background-color: rgba(255, 255, 255, 0.217);
     border-radius: 17px;
     position: relative;
     outline: none;
@@ -344,7 +36,7 @@
   .linkA {
     height: max-content;
     width: max-content;
-    color: rgb(255, 255, 255);
+    color: rgba(0, 42, 255, 0.828);
     text-decoration: none;
     background-color: rgb(0, 0, 0);
     padding: 15px;
@@ -423,7 +115,7 @@
   .NextjstWrapper,
   .GithubtWrapper,
   .VercelWrapper > p {
-    color: rgb(0, 0, 0);
+    color: rgba(255, 255, 255, 0.847);
     font-size: 19px;
     letter-spacing: 2px;
     /* word-spacing: 2px; */
@@ -441,7 +133,7 @@
   .VercelWrapper {
     grid-area: vercel;
   }
-}
+
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
   .ReactWrapper,

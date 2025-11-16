@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import "./page.css";
 export default function Movieshub() {
   const [movie, setMovie] = useState("");
@@ -25,9 +25,9 @@ export default function Movieshub() {
         }
         let quality = p == true ? `${q}p` : q;
 
-        const api = `https://isaidub.free/movie/${movie}-movie-${quality}-hd/`;
+        const api1 = `https://isaidub.free/movie/${movie}-movie-${quality}-hd/`;
 
-        window.location.href = api;
+        window.location.href = api1;
         movie = "";
         q = "";
         p = false;
@@ -51,37 +51,105 @@ export default function Movieshub() {
     }
     let valid = s == true ? "0" + season : season > 9 ? season : "0" + season;
 
-    const api2 = `https://isaidub.free/movie/${webseries}-season-${valid}-tamil-dubbed-movie/`;
-
-    window.location.href = api2;
+    if (webseries !== "" && season !== "") {
+      const api1 = `https://isaidub.free/movie/${webseries}-season-${valid}-tamil-dubbed-movie/`;
+      window.location.href = api1;
+    }
     webseries = "";
     season = "";
+  }
+
+  // Tamil Movies
+  function tamilmovieHandler(e) {
+    e.preventDefault();
+
+    let movie = e.target.tamilmovie.value
+      .trim()
+      .toLowerCase()
+      .split(" ")
+      .join("-");
+
+    // console.log(movie);
+
+    let y = e.target.tamilyear.value.trim().toLowerCase();
+
+    if (movie !== "" && y !== "") {
+      const api2 = `https://kollymovies.org/movie/${movie}-${y}-tamil-movie`;
+
+      window.location.href = api2;
+    }
+    movie = "";
+    y = "";
+  }
+
+  function tamilwebseriesHandler(e) {
+    e.preventDefault();
+
+    let webseries = e.target.tamilwebseries.value
+      .trim()
+      .toLowerCase()
+      .split(" ")
+      .join("-");
+
+    let y = e.target.tamilwebseriesyear.value.trim();
+
+    if (webseries !== "" && y !== "") {
+      const api2 = `https://kollymovies.org/movie/${webseries}-${y}-tamil-web-series`;
+      window.location.href = api2;
+    }
+    webseries = "";
+    y = "";
   }
 
   return (
     <>
       <div className="hubContainer">
         <div className="movieSelector">
-          <label>Movies Hub Section</label>
-          <button
-            type="button"
-            onClick={(e) => {
-              e.preventDefault();
-              setMovie("movie");
-            }}
-          >
-            Movie
-          </button>
-          <button
-            type="button"
-            onClick={(e) => {
-              e.preventDefault();
-              setMovie("web series");
-            }}
-          >
-            Web Series
-          </button>
+          <div className="tamildubmovies">
+            <label>Dubbed Collection</label>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                setMovie("movie");
+              }}
+            >
+              Tamil Dubbed Movie
+            </button>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                setMovie("web series");
+              }}
+            >
+              Tamil Dubbed Web Series
+            </button>
+          </div>
+
+          <div className="tamilmovies">
+            <label>Tamil Movie Collection</label>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                setMovie("tamil movie");
+              }}
+            >
+              Tamil Movie
+            </button>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                setMovie("tamil web series");
+              }}
+            >
+              Tamil Web Series
+            </button>
+          </div>
         </div>
+        {/* Tamil Dubbed Section */}
         {movie == "movie" && (
           <div className="moviesWrapper">
             <span>Movies Hub</span>
@@ -102,6 +170,31 @@ export default function Movieshub() {
               <input name="webseries" />
               <label>Season:</label>
               <input name="season" />
+              <button type="submit">Search</button>
+            </form>
+          </div>
+        )}
+        {/* Tamil Movies Section */}
+        {movie == "tamil movie" && (
+          <div className="moviesWrapper">
+            <span>Movies Hub</span>
+            <form onSubmit={tamilmovieHandler}>
+              <label>Movie Name:</label>
+              <input name="tamilmovie" />
+              <label>Year:</label>
+              <input name="tamilyear" />
+              <button type="submit">Search</button>
+            </form>
+          </div>
+        )}
+        {movie == "tamil web series" && (
+          <div className="webseriesWrapper">
+            <span>Web Series Hub</span>
+            <form onSubmit={tamilwebseriesHandler}>
+              <label>Web Series Name:</label>
+              <input name="tamilwebseries" />
+              <label>Year:</label>
+              <input name="tamilwebseriesyear" />
               <button type="submit">Search</button>
             </form>
           </div>

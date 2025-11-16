@@ -20,7 +20,7 @@ export default function ScrollTop() {
     const vw = window.innerWidth;
     const psh = document.querySelector("main").offsetHeight;
     const offpsh = psh / 2;
-
+    // console.log(psh);
     if (vw < 768) {
       if (offpsh <= 500) {
         down.style.display = "none";
@@ -43,6 +43,8 @@ export default function ScrollTop() {
   function scrollTop() {
     // const scrolltopWrapper = document.querySelector(".scrolltopContainer");
     const psh = document.querySelector("main").offsetHeight;
+
+    
     const offpsh = psh / 2;
     if (scrollY > 100 && scrollY < offpsh) {
       document.body.scrollTop = document.documentElement.scrollTo({
