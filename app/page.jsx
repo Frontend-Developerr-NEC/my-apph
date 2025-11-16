@@ -1,12 +1,16 @@
+"use client";
 import s from "./page.module.css";
 import Image from "next/image";
 import react from "../public/react.png";
 import nextjs from "../public/nextJs.png";
 import github from "../public/github.png";
 import vercel from "../public/vercel.png";
+
 export default function Home() {
+ 
   return (
     <>
+
       <section className={s.programmingLanguage}>
         <div className={s.ReactWrapper}>
           <Image src={react} className={s.reactLogo} alt="react" />
@@ -17,7 +21,9 @@ export default function Home() {
             JavaScript. React is designed to let you seamlessly combine
             components written by independent people, teams, and organizations.
           </p>
-          <a href="https://react.dev/" className={s.linkA} target="__new">Read More</a>
+          <a href="https://react.dev/" className={s.linkA} target="__new">
+            Read More
+          </a>
         </div>
 
         <div className={s.NextjstWrapper}>
@@ -29,7 +35,9 @@ export default function Home() {
             fetching, server actions, routing, and more. Learn Next.js features,
             deploy to Vercel, and explore templates and showcases.
           </p>
-          <a href="https://nextjs.org/" className={s.linkA} target="__new">Read More</a>
+          <a href="https://nextjs.org/" className={s.linkA} target="__new">
+            Read More
+          </a>
         </div>
 
         <div className={s.GithubtWrapper}>
@@ -41,7 +49,9 @@ export default function Home() {
             used for open source software development and offers various tools
             for collaboration, project management, and security.
           </p>
-          <a href="https://github.com/" className={s.linkA} target="__new">Read More</a>
+          <a href="https://github.com/" className={s.linkA} target="__new">
+            Read More
+          </a>
         </div>
 
         <div className={s.VercelWrapper}>
@@ -53,7 +63,9 @@ export default function Home() {
             tools and templates to deploy from Git or CLI, integrate with
             various platforms, and optimize your rendering and observability.
           </p>
-          <a href="https://vercel.com/" className={s.linkA} target="__new">Read More</a>
+          <a href="https://vercel.com/" className={s.linkA} target="__new">
+            Read More
+          </a>
         </div>
       </section>
     </>

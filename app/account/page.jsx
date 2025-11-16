@@ -16,6 +16,7 @@ export default function page() {
 
     const username = document.getElementById("username");
     username.textContent = `${StoredEmail.Username}`.toLowerCase();
+    // username.textContent=session.user.name;
 
     const email = document.getElementById("email");
     email.textContent = `${StoredEmail.Email}`.toLowerCase();

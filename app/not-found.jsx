@@ -7,10 +7,13 @@ import { useEffect } from "react";
 export default function NotFound() {
   const router = useRouter();
   useEffect(() => {
-    let home = setTimeout(() => {
+    
+    setTimeout(() => {
+      console.log("jj");
       router.replace("/");
     }, 5000);
-    clearInterval(home);
+    clearInterval(1);
+    clearTimeout(1)
   }, []);
   return (
     <div className="global-error">

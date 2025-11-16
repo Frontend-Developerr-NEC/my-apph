@@ -3,6 +3,7 @@ import "./header.css";
 import Link from "next/link";
 import Image from "next/image";
 import menu from "../../../public/menu.png";
+import ThemeToggle from "../ThemeToggler";
 
 // import home from "../../../public/home1.png";
 // import calculator from "../../../public/calculator.png";
@@ -93,6 +94,8 @@ export default function Header() {
             >
               Virtual Cards
             </Link>
+
+            {/* <ThemeToggle /> */}
 
             <Link
               href="/account/"

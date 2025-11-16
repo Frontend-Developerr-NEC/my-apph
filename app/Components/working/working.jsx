@@ -7,7 +7,7 @@ export default function Working() {
     <>
       <section id="workingPageContainer">
         <div className="workingPageWrapper">
-          <span>Page is Working</span>
+          <span> &uarr; Page is Working &darr;</span>
           <Image
             width={300}
             height={300}
