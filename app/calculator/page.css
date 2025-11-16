@@ -13,9 +13,9 @@
 
 #backSum {
   position: absolute;
-  top: 60px;
-  left: 40px;
-  font-size: 19px;
+  top: 62px;
+  left: 25px;
+  font-size: 18px;
 }
 
 .calculatorWrapper {
@@ -23,14 +23,14 @@
   grid-auto-flow: row;
   grid-template-columns: minmax(200px, 270px);
   gap: 5px;
-  padding: 20px;
-  background: #ffffff40;
-  margin: 25px 0px 0px 0px;
+  padding: 15px;
+  background: transparent;
+  margin: 28px 0px 0px 0px;
   border-radius: 13px;
   overflow: hidden;
   border: none;
   outline: none;
-  /* box-shadow: 0px 0px 15px 4px #ffffff1c; */
+  border: 1px ridge whitesmoke;
 }
 
 #display {
@@ -40,14 +40,14 @@
   border: none;
   letter-spacing: 5px;
   padding-left: 10px;
-  padding-right: 10px;
+  padding-right: -10px;
   outline: none;
   border-radius: 10px;
   background-color: transparent;
-  color: rgb(0, 0, 0);
+  margin: 0px 0px 5px 0px;
+  color: rgb(255, 255, 255);
   text-align: right;
-  border: 2px solid rgb(0, 0, 0);
-  /* border: 2px solid rgb(0, 0, 0); */
+  /* border: 1px ridge rgb(255, 255, 255); */
 }
 
 .operator {
@@ -96,19 +96,8 @@
   padding: 0px 2px;
 }
 
-.r5 button:nth-child(1) {
+.r5 button {
   /* width: 100px; */
   font-size: 25px;
 }
-.r5 button:nth-child(2) {
-  /* width: 100px; */
-  font-size: 25px;
-}
-.r5 button:nth-child(3) {
-  /* width: 100px; */
-  font-size: 25px;
-}
-.r5 button:nth-child(4) {
-  /* width: 100px; */
-  font-size: 25px;
-}
+

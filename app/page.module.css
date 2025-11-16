@@ -1,160 +1,118 @@
-  .programmingLanguage {
-    display: grid;
-    grid-auto-flow: row;
-    gap: 20px;
-    position: relative;
-    grid-template-columns: repeat(1, minmax(150px, 400px));
-    grid-template-areas:
-      "react"
-      "nextjs"
-      "github"
-      "vercel";
-  }
+.programmingLanguage {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 20px;
+  position: relative;
+  grid-template-columns: repeat(1, minmax(150px, 400px));
+  grid-template-areas:
+    "react"
+    "nextjs"
+    "github"
+    "vercel";
+}
 
-  .ReactWrapper,
-  .NextjstWrapper,
-  .GithubtWrapper,
-  .VercelWrapper {
-    display: grid;
-    grid-auto-flow: row;
-    gap: 15px;
-    height: max-content;
-    padding: 15px 15px;
-    text-align: justify;
-    justify-content: center;
-    grid-template-columns: minmax(200px, 400px);
-    background-color: rgba(255, 255, 255, 0.217);
-    border-radius: 17px;
-    position: relative;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    z-index: 0;
-    /* color: #000000; */
-  }
+.ReactWrapper,
+.NextjstWrapper,
+.GithubtWrapper,
+.VercelWrapper {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 15px;
+  height: max-content;
+  padding: 15px 20px;
+  text-align: justify;
+  justify-content: center;
+  grid-template-columns: minmax(150px, 400px);
+  background-color: transparent;
+  border: 2px solid whitesmoke;
+  /* border: none; */
+  /* background-color: rgba(255, 255, 255, 0.217); */
+  border-radius: 17px;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  z-index: 0;
+}
 
-  .linkA {
-    height: max-content;
-    width: max-content;
-    color: rgba(0, 42, 255, 0.828);
-    text-decoration: none;
-    background-color: rgb(0, 0, 0);
-    padding: 15px;
-    border-radius: 10px;
-    letter-spacing: 2px;
-    word-spacing: 2px;
-  }
-
-  .reactLogo {
-    height: 60px;
-    width: 60px;
-    border-radius: 15px;
-    padding: 10px;
-    filter: brightness(50, 50);
-    border: 2px solid rgb(0, 0, 0);
-  }
-  .ReactWrapper,
-  .NextjstWrapper,
-  .GithubtWrapper,
-  .VercelWrapper > a {
-    letter-spacing: 2px;
-  }
-
-  .nextjsLogo {
-    height: 60px;
-    width: 60px;
-    border-radius: 25px;
-    border: 2px solid rgb(0, 0, 0);
-    filter: brightness(5);
-  }
-
-  .githubLogo {
-    height: 60px;
-    width: 60px;
-    border-radius: 50px;
-    filter: brightness(5, 5);
-  }
-
-  .vercelLogo {
-    height: 60px;
-    width: 60px;
-    border-radius: 20px;
-    border: 2px solid rgb(0, 0, 0);
-    filter: brightness(5, 5);
-  }
-
-  .ReactWrapper > h4 {
-    text-align: left;
-    font-size: 22px;
-    color: #000000;
-    letter-spacing: 2px;
-  }
-
-  .NextjstWrapper > h4 {
-    text-align: left;
-    font-size: 20px;
-    color: #000000;
-    letter-spacing: 4px;
-  }
-
-  .GithubtWrapper > h4 {
-    text-align: left;
-    font-size: 20px;
-    color: #000000;
-    letter-spacing: 3px;
-  }
-
-  .VercelWrapper > h4 {
-    text-align: left;
-    font-size: 20px;
-    color: #000000;
-    letter-spacing: 3px;
-  }
-
-  .ReactWrapper,
-  .NextjstWrapper,
-  .GithubtWrapper,
-  .VercelWrapper > p {
-    color: rgba(255, 255, 255, 0.847);
+.linkA {
+  height: max-content;
+  width: max-content;
     font-size: 19px;
-    letter-spacing: 2px;
-    /* word-spacing: 2px; */
-  }
+  color: rgba(0, 0, 0, 0.828);
+  text-decoration: none;
+  background-color: rgb(0, 42, 255, 0.828);
+  padding: 15px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+}
 
-  .ReactWrapper {
-    grid-area: react;
-  }
-  .NextjstWrapper {
-    grid-area: nextjs;
-  }
-  .GithubtWrapper {
-    grid-area: github;
-  }
-  .VercelWrapper {
-    grid-area: vercel;
-  }
+.reactLogo {
+  height: 60px;
+  width: 60px;
+  border-radius: 15px;
+  padding: 8px;
+  filter: brightness(50, 50);
+  border: 1px ridge rgb(0, 187, 255);
+}
 
+.nextjsLogo {
+  height: 60px;
+  width: 60px;
+  border-radius: 25px;
+  border: 2px solid rgb(0, 0, 0);
+  filter: brightness(5);
+}
+
+.githubLogo {
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  filter: brightness(5, 5);
+}
+
+.vercelLogo {
+  height: 60px;
+  width: 60px;
+  border-radius: 20px;
+  border: 1px ridge rgb(255, 255, 255);
+  filter: brightness(5, 5);
+}
+
+.ReactWrapper > h4,
+.NextjstWrapper > h4,
+.GithubtWrapper > h4,
+.VercelWrapper > h4 {
+  text-align: left;
+  font-size: 20px;
+  color: #fbfbfb;
+  letter-spacing: 4px;
+}
+
+.ReactWrapper,
+.NextjstWrapper,
+.GithubtWrapper,
+.VercelWrapper > p {
+  color: rgba(255, 255, 255, 0.847);
+  font-size: 19px;
+  letter-spacing: 2px;
+  /* word-spacing: 2px; */
+}
+
+.ReactWrapper {
+  grid-area: react;
+}
+.NextjstWrapper {
+  grid-area: nextjs;
+}
+.GithubtWrapper {
+  grid-area: github;
+}
+.VercelWrapper {
+  grid-area: vercel;
+}
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
-  .ReactWrapper,
-  .NextjstWrapper,
-  .GithubtWrapper,
-  .VercelWrapper {
-    display: grid;
-    grid-auto-flow: row;
-    gap: 15px;
-    height: max-content;
-    padding: 20px;
-    text-align: justify;
-    justify-content: center;
-    grid-template-columns: minmax(150px, 400px);
-    border-radius: 17px;
-    position: relative;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    z-index: 0;
-  }
   .programmingLanguage {
     display: grid;
     grid-auto-flow: row;
@@ -165,25 +123,6 @@
   }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  .ReactWrapper,
-  .NextjstWrapper,
-  .GithubtWrapper,
-  .VercelWrapper {
-    display: grid;
-    grid-auto-flow: row;
-    gap: 15px;
-    height: max-content;
-    padding: 20px;
-    text-align: justify;
-    justify-content: center;
-    grid-template-columns: minmax(150px, 400px);
-    border-radius: 17px;
-    position: relative;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    z-index: 0;
-  }
   .programmingLanguage {
     display: grid;
     grid-auto-flow: row;
@@ -195,25 +134,6 @@
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
-  .ReactWrapper,
-  .NextjstWrapper,
-  .GithubtWrapper,
-  .VercelWrapper {
-    display: grid;
-    grid-auto-flow: row;
-    gap: 15px;
-    height: max-content;
-    padding: 20px;
-    text-align: justify;
-    justify-content: center;
-    grid-template-columns: minmax(150px, 400px);
-    border-radius: 17px;
-    position: relative;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    z-index: 0;
-  }
   .programmingLanguage {
     display: grid;
     grid-auto-flow: row;
