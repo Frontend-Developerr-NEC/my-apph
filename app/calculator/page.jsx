@@ -1,11 +1,7 @@
 "use client";
 import { useState } from "react";
 import "./page.css";
-// import Image from "next/image";
-// import react from "../public/react.png";
-// import nextjs from "../public/nextJs.png";
-// import github from "../public/github.png";
-// import vercel from "../public/vercel.png";
+
 export default function Calculator() {
   // let display = document.getElementById("display");
   let [sum, setSum] = useState("");
@@ -19,7 +15,7 @@ export default function Calculator() {
             value={sum}
             onChange={(e) => {
               e.preventDefault();
-              e.target.value = sum;
+              e.target.value = Number(sum).toFixed(0);
             }}
           />
           <span id="backSum"></span>

@@ -97,14 +97,13 @@ export default function Header() {
 
             {/* <ThemeToggle /> */}
 
-            <Link
+            {/* <Link
               href="/account/"
               className="Links"
               onClick={() => setSidebar("close")}
             >
-              {/* <Image src={account} alt="=" className="account" /> */}
               Account
-            </Link>
+            </Link> */}
 
             <button
               className="logout"

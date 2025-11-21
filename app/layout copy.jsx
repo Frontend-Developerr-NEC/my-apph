@@ -2,12 +2,13 @@
 
 import "./globals.css";
 // import {signIn} from "next-auth/react";
-import Header from "./Components/Header/header";
+// import Header from "./Components/Header/header";
 import ScrollTop from "./Components/scrolltop/scrolltop";
 import bcrypt from "bcryptjs";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { ThemeProvider } from "../context/ThemeContext";
 
 import register from "../public/add-user.png";
 import login from "../public/login-.png";
@@ -20,12 +21,9 @@ export default function RootLayout({ children }) {
 
   const router = useRouter();
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      if (localStorage.getItem("User")) {
-        setPageToggle("HomePage");
-      }
+    if (localStorage.getItem("User")) {
+      setPageToggle("HomePage");
     }
-    console.log(typeof window !== "undefined", "Type: " + typeof window);
   }, [router]);
 
   async function submitHandler(e) {
@@ -115,11 +113,10 @@ export default function RootLayout({ children }) {
   }
   return (
     <html lang="en" data-scroll-behavior="smooth">
-      <head>
-        <title>Freelancer.dev</title>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-      </head>
-      <body>
+{/* <meta name="title" content="HHH"/> */}
+      {/* <link rel="shortcut icon" href={freelancer} type="image/x-icon" /> */}
+
+      <ThemeProvider>
         {pageToggle == "Register" && (
           <form className="formRegister">
             <h2 style={{ textAlign: "center" }}>Register</h2>
@@ -164,9 +161,9 @@ export default function RootLayout({ children }) {
             {/* <button type="button"
               onClick={() => {
                 signIn("google");
-                }}
+              }}
               style={{ padding: "10px 20px", fontSize: "16px" }}
-              >
+            >
               Continue with Google
             </button> */}
             <button
@@ -222,12 +219,11 @@ export default function RootLayout({ children }) {
         )}
         {pageToggle == "HomePage" && (
           <>
-            <Header />
-            <main>{children}</main>
+            {children}
             <ScrollTop />
           </>
         )}
-      </body>
+      </ThemeProvider>
     </html>
   );
 }

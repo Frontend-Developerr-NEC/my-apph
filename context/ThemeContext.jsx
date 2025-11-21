@@ -14,7 +14,6 @@ export const ThemeProvider = ({ children }) => {
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <body>
         <Header />
-        {/* <div className="ToastAlert">{...props}</div> */}
         <main>{children}</main>
       </body>
     </ThemeContext.Provider>

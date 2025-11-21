@@ -53,7 +53,7 @@
   border-radius: 15px;
   padding: 8px;
   filter: brightness(50, 50);
-  border: 1px ridge cyan;
+  border: 2px ridge rgb(0, 208, 255);
 }
 
 .nextjsLogo {
@@ -75,7 +75,7 @@
   height: 60px;
   width: 60px;
   border-radius: 20px;
-  border: 1px ridge rgb(255, 255, 255);
+  border: 2px ridge rgb(255, 255, 255);
   filter: brightness(5, 5);
 }
 

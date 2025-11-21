@@ -52,6 +52,7 @@
   letter-spacing: 2px;
 }
 
+/* .todoLists::-ms-fill::after { */
 .todoLists {
   padding: 7px;
   margin: 15px 0px 0px 0px;
@@ -59,21 +60,21 @@
   flex-direction: column;
   overflow-y: auto;
   gap: 10px;
-  border: 1px ridge rgb(255, 255, 255);
+  border: 2px ridge rgb(255, 255, 255);
   height: 265px;
   border-radius: 10px;
 }
 
+
 .todoLists:empty::after {
   content: "No tasks yet. Add Some!";
   text-align: center;
-  color: rgba(255, 255, 255, 0.751);
+  color: rgba(255, 0, 0, 0.751);
   height: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 2px ridge red;
   border-radius: 10px;
   height: 100%;
   width: 100%;
@@ -81,14 +82,15 @@
 
 .todoList {
   display: flex;
-  border-radius: 10px;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  /* border: 0.5px ridge rgb(255, 255, 255); */
+  border-bottom: 2px ridge rgb(255, 255, 255);
   height: max-content;
   padding: 10px 10px;
 }
+
+
 
 .todoList span {
   font-size: 18px;
