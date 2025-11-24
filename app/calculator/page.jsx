@@ -1,12 +1,16 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./page.css";
 
 export default function Calculator() {
   // let display = document.getElementById("display");
   let [sum, setSum] = useState("");
+  useEffect(() => {
+    localStorage.getItem("backSum");
+  }, []);
   return (
     <>
+      <title>Calculator</title>
       <section className="calculatorContainer">
         <section className="calculatorWrapper ">
           <input
@@ -15,7 +19,7 @@ export default function Calculator() {
             value={sum}
             onChange={(e) => {
               e.preventDefault();
-              e.target.value = Number(sum).toFixed(0);
+              e.target.value = Number(sum).toFixed(1);
             }}
           />
           <span id="backSum"></span>
@@ -218,6 +222,7 @@ export default function Calculator() {
               className="operator"
               onClick={(e) => {
                 e.preventDefault();
+                document.getElementById("backSum").style.display = "none";
                 document.getElementById("backSum").textContent = "";
                 setSum("");
               }}
@@ -230,8 +235,10 @@ export default function Calculator() {
               onClick={(e) => {
                 e.preventDefault();
 
-                document.getElementById("backSum").textContent = `${sum}`;
                 try {
+                  document.getElementById("backSum").style.display = "flex";
+                  document.getElementById("backSum").textContent = `${sum}`;
+
                   setSum(eval(sum));
                 } catch (error) {
                   setSum("Error");

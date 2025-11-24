@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import "./page.css";
 export default function Testing() {
   const [todo, setTodo] = useState("");
-  const [todoList, setTodolist] = useState([]);
+  const [todoList, setTodolist] = useState([...todo]);
   useEffect(() => {
     const todoLS = JSON.parse(localStorage.getItem("Todos"));
     if (todoLS) {
@@ -27,6 +27,7 @@ export default function Testing() {
   }
   return (
     <>
+    <title>Todo-List</title>
       <section className="todoContainer">
         <span>To-Do List</span>
         <div className="todoInput">

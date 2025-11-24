@@ -80,6 +80,7 @@ export default function Movieshub() {
 
   return (
     <>
+      <title>MoviesHub</title>
       <div className="hubContainer">
         <div className="movieSelector">
           <div className="tamildubmovies">

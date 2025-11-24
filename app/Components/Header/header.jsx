@@ -3,13 +3,14 @@ import "./header.css";
 import Link from "next/link";
 import Image from "next/image";
 import menu from "../../../public/menu.png";
-import ThemeToggle from "../ThemeToggler";
 
+// import ThemeToggle from "../ThemeToggler";
 // import home from "../../../public/home1.png";
 // import calculator from "../../../public/calculator.png";
 // import movies from "../../../public/clapperboard.png";
 // import programmer from "../../../public/programmer.png";
 // import account from "../../../public/account.png";
+
 import logout from "../../../public/logout.png";
 import x from "../../../public/x.png";
 
@@ -49,17 +50,16 @@ export default function Header() {
               onClick={() => setSidebar("close")}
             >
               {/* <Image src={home} alt="=" className="home" /> */}
-              Home
+              HOME
             </Link>
 
-            <Link
+            {/* <Link
               href="/about/"
               className="Links"
               onClick={() => setSidebar("close")}
             >
-              {/* <Image src={programmer} alt="=" className="programmer" /> */}
-              About Me
-            </Link>
+              ABOUT ME
+            </Link> */}
 
             <Link
               href="/moviesHub/"
@@ -67,7 +67,7 @@ export default function Header() {
               onClick={() => setSidebar("close")}
             >
               {/* <Image src={movies} alt="=" className="movies" /> */}
-              Movies Hub
+              MOVIES HUB
             </Link>
 
             <Link
@@ -76,7 +76,7 @@ export default function Header() {
               onClick={() => setSidebar("close")}
             >
               {/* <Image src={calculator} alt="=" className="calculator" /> */}
-              Calculator
+              CALCULATOR
             </Link>
 
             <Link
@@ -84,7 +84,7 @@ export default function Header() {
               className="Links"
               onClick={() => setSidebar("close")}
             >
-              Todo List
+              TODO LIST
             </Link>
 
             <Link
@@ -92,7 +92,7 @@ export default function Header() {
               className="Links"
               onClick={() => setSidebar("close")}
             >
-              Virtual Cards
+              CARDS
             </Link>
 
             {/* <ThemeToggle /> */}

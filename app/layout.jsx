@@ -116,7 +116,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <head>
-        <title>Freelancer.dev</title>
+        <title>Freelancer</title>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
       </head>
       <body>

@@ -1,43 +1,35 @@
-
-
 .hubContainer {
   height: max-content;
   display: grid;
   grid-template-columns: minmax(200px, 300px);
   text-align: center;
   gap: 25px;
-  background-color: black;
+  background-color: transparent;
 }
-
-/* .movieSelector{
-  display: flex;
-  flex-direction: column;
-} */
 
 .tamildubmovies,.tamilmovies{
   display: flex;
   flex-direction: column;
-  position: relative;
   gap: 15px;
 }
 
 .tamildubmovies,.tamilmovies label {
-  filter: brightness(15, 15);
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-size: 20px;
   color: blue;
 }
 
  button {
   height: max-content;
-  width: 250px;
+  width: 100%;
   border-radius: 10px;
   outline: none;
   border: none;
-  font-size: 20px;
-  letter-spacing: 2px;
+  font-size: 17px;
   background-color: rgb(13, 241, 241);
   padding: 10px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
 }
 
 .moviesWrapper {
@@ -59,7 +51,7 @@
 
 span {
   font-size: 20px;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .moviesWrapper > form {
@@ -71,8 +63,8 @@ span {
 
 .moviesWrapper > form > label {
   text-align: left;
-  letter-spacing: 1px;
-  color: black;
+ font-size: 17px;
+  color: rgb(255, 255, 255);
 }
 
 .moviesWrapper > form > input {
@@ -85,7 +77,7 @@ span {
   border: none;
   border-bottom: 1px ridge whitesmoke;
   background-color: transparent;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .moviesWrapper > form > input:focus {
@@ -93,18 +85,18 @@ span {
   border: none;
   border-bottom: 1px ridge whitesmoke;
   letter-spacing: 5px;
-  color: red;
+  color: rgb(0, 0, 0);
 }
 
 .moviesWrapper > form > button {
   height: 45px;
   width: 100%;
   font-size: 20px;
-  letter-spacing: 2px;
   font-weight: 700;
   border-radius: 10px;
   border: none;
-  background: linear-gradient(to right, #0bffba, #50b9c9, #0bffba);
+  background: linear-gradient(to right, #0bffba, #0bffba);
+  outline: none;
 }
 /* Webs Series */
 .webseriesWrapper {
@@ -125,8 +117,8 @@ span {
 
 .webseriesWrapper > form > label {
   text-align: left;
-  letter-spacing: 1px;
-  color: black;
+  font-size: 17px;
+  color: rgb(255, 255, 255);
 }
 
 .webseriesWrapper > form > input {
@@ -139,7 +131,7 @@ span {
   border: none;
   border-bottom: 1px ridge whitesmoke;
   background-color: transparent;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .webseriesWrapper > form > input:focus {
@@ -147,18 +139,17 @@ span {
   border: none;
   border-bottom: 1px ridge whitesmoke;
   letter-spacing: 5px;
-  color: red;
+  color: rgb(0, 0, 0);
 }
 
 .webseriesWrapper > form > button {
   height: 45px;
   width: 100%;
   font-size: 20px;
-  letter-spacing: 2px;
   font-weight: 700;
   border-radius: 10px;
   border: none;
-  background: linear-gradient(to right, #0bffba, #50b9c9, #0bffba);
+  background: linear-gradient(to right, #0bffba, #0bffba);
   outline: none;
 }
 
@@ -176,6 +167,16 @@ span {
   border-radius: 20px;
 }
 
-
+@media screen and (min-width:768px) {
+  .hubContainer {
+  height: max-content;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: minmax(200px, 300px);
+  text-align: center;
+  gap: 25px;
+  background-color: transparent;
+}
+}
 
 

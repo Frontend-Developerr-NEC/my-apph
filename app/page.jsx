@@ -7,10 +7,9 @@ import github from "../public/github.png";
 import vercel from "../public/vercel.png";
 
 export default function Home() {
- 
   return (
     <>
-
+      <title>Home</title>
       <section className={s.programmingLanguage}>
         <div className={s.ReactWrapper}>
           <Image src={react} className={s.reactLogo} alt="react" />
@@ -22,7 +21,7 @@ export default function Home() {
             components written by independent people, teams, and organizations.
           </p>
           <a href="https://react.dev/" className={s.linkA} target="__new">
-            Read More
+            Continue reading &#8594;
           </a>
         </div>
 
@@ -36,7 +35,7 @@ export default function Home() {
             deploy to Vercel, and explore templates and showcases.
           </p>
           <a href="https://nextjs.org/" className={s.linkA} target="__new">
-            Read More
+            Continue reading &#8594;
           </a>
         </div>
 
@@ -50,7 +49,7 @@ export default function Home() {
             for collaboration, project management, and security.
           </p>
           <a href="https://github.com/" className={s.linkA} target="__new">
-            Read More
+            Continue reading &#8594;
           </a>
         </div>
 
@@ -64,7 +63,7 @@ export default function Home() {
             various platforms, and optimize your rendering and observability.
           </p>
           <a href="https://vercel.com/" className={s.linkA} target="__new">
-            Read More
+            Continue reading &#8594;
           </a>
         </div>
       </section>

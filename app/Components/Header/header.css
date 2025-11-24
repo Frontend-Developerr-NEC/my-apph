@@ -3,12 +3,6 @@
   margin: 0%;
 }
 
-@media screen and (prefers-color-scheme: dark) {
-}
-
-@media screen and (prefers-color-scheme: light) {
-}
-
 header {
   height: 55px;
   width: 100%;
@@ -30,12 +24,6 @@ header > .logo {
   font-weight: 800;
   font-size: 20px;
   letter-spacing: 2px;
-}
-
-header > .logo > span {
-  font-weight: 800;
-  font-size: 20px;
-  color: rgba(28, 27, 27, 0.786);
 }
 
 .open {
@@ -80,7 +68,8 @@ aside {
   left: 0%;
   right: 0%;
   bottom: 0%;
-  background-color: rgb(0, 0, 0);
+  background: rgb(0, 0, 0);
+  backdrop-filter: blur(20px);
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -89,24 +78,21 @@ aside {
   justify-content: center;
   gap: 25px;
   transition: all 1s linear;
-  z-index: 9999999;
+  z-index: 9999999999;
 }
 
 .Links {
-  color: rgb(0, 58, 217);
+  color: white;
   text-decoration: none;
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 5px;
-}
-
-.homeLink {
-  font-size: 18px;
+  z-index: 9999999;
 }
 
 aside > .logout {
@@ -126,73 +112,6 @@ aside > .logout {
   font-size: 19px;
   box-shadow: 1px 1px 10px black;
   border: 2px solid rgb(255, 0, 0);
-}
-
-.themeContainer {
-  border: 2px solid black;
-  padding: 5px 5px 5px 5px;
-  width: 100px;
-  height: 40px;
-  position: relative;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  transition: all 5s linear;
-}
-
-#themeTogglerWhite {
-  position: absolute;
-  left: 7%;
-  width: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  border-radius: 50%;
-  text-align: center;
-  background-color: black;
-  transition: all 5s linear;
-}
-#themeTogglerDark {
-  position: absolute;
-  right: 7%;
-  width: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  border-radius: 50%;
-  text-align: center;
-  background-color: black;
-  transition: all 5s linear;
-}
-
-.home,
-.bus,
-.movies,
-.calculator {
-  height: 22px;
-  width: 22px;
-  margin: 0px 5px 0px 0px;
-}
-.programmer {
-  height: 25px;
-  width: 30px;
-  /* margin: 0px 5px 0px 0px; */
-}
-
-.account {
-  height: 35px;
-  width: 35px;
-  margin: 0px 2px 0px 0px;
 }
 
 .Logout {
