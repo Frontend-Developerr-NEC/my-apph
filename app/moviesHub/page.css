@@ -160,7 +160,8 @@ span {
   gap: 15px;
   grid-auto-flow: row;
   padding: 20px 15px 20px 15px;
-  border: 2px solid whitesmoke;
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow: 0px 0px 5px white;
   position: relative;
   left: 50%;
   transform: translateX(-50%);

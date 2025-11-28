@@ -4,19 +4,22 @@ import { useEffect, useState } from "react";
 import "./page.css";
 export default function Testing() {
   const [todo, setTodo] = useState("");
-  const [todoList, setTodolist] = useState([...todo]);
+  const [todoList, setTodolist] = useState([]);
   useEffect(() => {
-    const todoLS = JSON.parse(localStorage.getItem("Todos"));
-    if (todoLS) {
-      setTodolist(todoLS);
+    let todoData = JSON.parse(localStorage.getItem("Todos"));
+    if (todoData == null) {
+      localStorage.setItem("Todos", JSON.stringify([]));
     }
-    console.log(todoList);
+    setTodolist(todoData);
   }, []);
   function addTodo(e) {
     e.preventDefault();
     if (todo == "") return;
     setTodolist([...todoList, { id: Date.now(), text: todo }]);
-    localStorage.setItem("Todos", JSON.stringify(todoList));
+    localStorage.setItem(
+      "Todos",
+      JSON.stringify([...todoList, { id: Date.now(), text: todo }])
+    );
     setTodo("");
   }
 
@@ -27,7 +30,7 @@ export default function Testing() {
   }
   return (
     <>
-    <title>Todo-List</title>
+      <title>Todo-List</title>
       <section className="todoContainer">
         <span>To-Do List</span>
         <div className="todoInput">
